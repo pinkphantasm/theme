@@ -2,6 +2,8 @@
 
 ## Light
 
+![pinkphantasm-light](https://github.com/pinkphantasm/theme/assets/110753839/5020fdf7-bcfe-4b1e-80d4-c4b50a7d7384)
+
 | Palette      | Hex       | RGB           | HSL             | Preview                                                                                                            |
 | ------------ | --------- | ------------- | --------------- |:------------------------------------------------------------------------------------------------------------------:|
 | Background   | `#F5FFFA` | `245 255 250` | `150° 100% 98%` | ![light-background](https://github.com/pinkphantasm/theme/assets/110753839/7e009f30-388e-4998-8818-5264e0b82c65)   |
@@ -18,6 +20,8 @@
 | Yellow       | `#DDD645` | `221 214 69`  | `57° 69% 57%`   | ![light-yellow](https://github.com/pinkphantasm/theme/assets/110753839/31bb168a-718d-479a-a969-3ef7af9a11f0)       |
 
 ## Dark
+
+![pinkphantasm-dark](https://github.com/pinkphantasm/theme/assets/110753839/05a93a58-15ec-4805-9e9c-c2676492963d)
 
 | Palette      | Hex       | RGB           | HSL             | Preview                                                                                                            |
 | ------------ | --------- | ------------- | --------------- |:------------------------------------------------------------------------------------------------------------------:|
