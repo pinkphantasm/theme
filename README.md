@@ -1,5 +1,7 @@
 # Pink Phantasm Theme
 
+A simple and consistent color scheme created at Pink Phantasm.
+
 ## Light
 
 ![pinkphantasm-light](https://github.com/pinkphantasm/theme/assets/110753839/5020fdf7-bcfe-4b1e-80d4-c4b50a7d7384)
