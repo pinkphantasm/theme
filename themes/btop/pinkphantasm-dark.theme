@@ -1,0 +1,54 @@
+theme[main_bg]         = "#232323"
+theme[main_fg]         = "#F5FFFA"
+theme[title]           = "#F5FFFA"
+theme[hi_fg]           = "#FFA474"
+theme[selected_bg]     = "#404240"
+theme[selected_fg]     = "#FDD0E5"
+theme[inactive_fg]     = "#404240"
+theme[graph_text]      = "#787976"
+theme[proc_misc]       = "#787976"
+theme[cpu_box]         = "#787976"
+theme[mem_box]         = "#787976"
+theme[net_box]         = "#787976"
+theme[proc_box]        = "#787976"
+theme[div_line]        = "#787976"
+
+# Temperature graph colors
+theme[temp_start]      = "#6495ED"
+theme[temp_mid]        = "#FDD0E5"
+theme[temp_end]        = "#FE4242"
+
+# CPU graph colors
+theme[cpu_start]       = "#50B160"
+theme[cpu_mid]         = "#FFF44F"
+theme[cpu_end]         = "#FE4242"
+
+# Mem/Disk free meter
+theme[free_start]      = "#6495ED"
+theme[free_mid]        = "#9579E5"
+theme[free_end]        = "#FDD0E5"
+
+# Mem/Disk cached meter
+theme[cached_start]    = "#FE4242"
+theme[cached_mid]      = "#FFA474"
+theme[cached_end]      = "#FDD0E5"
+
+# Mem/Disk available meter
+theme[available_start] = "#50B160"
+theme[available_mid]   = "#FFF44F"
+theme[available_end]   = "#FE4242"
+
+# Mem/Disk used meter
+theme[used_start]      = "#50B160"
+theme[used_mid]        = "#FFF44F"
+theme[used_end]        = "#FE4242"
+
+# Download graph colors
+theme[download_start]  = "#6495ED"
+theme[download_mid]    = "#9579E5"
+theme[download_end]    = "#FDD0E5"
+
+# Upload graph colors
+theme[upload_start]    = "#FE4242"
+theme[upload_mid]      = "#FFA474"
+theme[upload_end]      = "#FDD0E5"
