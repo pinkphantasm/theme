@@ -29,8 +29,3 @@
     --red: #fe4242;
     --yellow: #fff44f;
 }
-
-body {
-    color: var(--foreground);
-    background-color: var(--background);
-}
