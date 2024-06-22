@@ -8,5 +8,26 @@ export default defineNuxtConfig({
         },
     },
 
+    i18n: {
+        baseUrl: 'https://theme.pinkphantasm.ru',
+        locales: [
+            {
+                code: 'en',
+                iso: 'en-US',
+            },
+            {
+                code: 'ru',
+                iso: 'ru-RU',
+            },
+        ],
+        defaultLocale: 'ru',
+        strategy: 'prefix_and_default',
+        detectBrowserLanguage: {
+            useCookie: true,
+            cookieKey: '__lang',
+            cookieCrossOrigin: true,
+        },
+    },
+
     modules: ['@nuxtjs/i18n'],
 })
