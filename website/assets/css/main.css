@@ -1,0 +1,36 @@
+.light-mode {
+    --background: #f5fffa;
+    --current-line: #e8eae8;
+    --selection: #e8eae8;
+    --foreground: #232323;
+    --comment: #a9a9a7;
+    --secondary: #a9a9a7;
+    --blue: #4169e1;
+    --green: #3ea04b;
+    --orange: #ff7514;
+    --pink: #f664af;
+    --purple: #8d71aa;
+    --red: #b11213;
+    --yellow: #ddd645;
+}
+
+.dark-mode {
+    --background: #232323;
+    --current-line: #404240;
+    --selection: #404240;
+    --foreground: #f5fffa;
+    --comment: #787976;
+    --secondary: #787976;
+    --blue: #6495ed;
+    --green: #50b160;
+    --orange: #ffa474;
+    --pink: #fdd0e5;
+    --purple: #9579e5;
+    --red: #fe4242;
+    --yellow: #fff44f;
+}
+
+body {
+    color: var(--foreground);
+    background-color: var(--background);
+}
