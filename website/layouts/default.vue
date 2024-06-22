@@ -1,16 +1,20 @@
 <script setup lang="ts">
 const route = useRoute()
+const { t } = useI18n()
+
 const head = useLocaleHead({
     addDirAttribute: true,
     identifierAttribute: 'id',
     addSeoAttributes: true,
 })
+
+const title = computed(() => t(route.meta.title ?? 'TBD', t('home.title')))
 </script>
 
 <template>
     <Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir">
         <Head>
-            <Title>Pink Phantasm Theme</Title>
+            <Title>{{ title }}</Title>
             <template v-for="link in head.link" :key="link.id">
                 <Link
                     :id="link.id"
