@@ -11,6 +11,7 @@
         "postinstall": "nuxt prepare"
     },
     "dependencies": {
+        "@nuxtjs/color-mode": "^3.4.1",
         "@nuxtjs/i18n": "^8.3.1",
         "nuxt": "^3.12.2",
         "vue": "^3.4.29",
