@@ -51,6 +51,7 @@ const switchColorMode = () => {
     height: 36px;
     background-color: transparent;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .button:hover {
