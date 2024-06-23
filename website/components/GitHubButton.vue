@@ -5,7 +5,7 @@
         external
         target="_blank"
     >
-        <Icon class="icon" name="carbon:logo-github" size="28" />
+        <Icon name="carbon:logo-github" size="28" />
     </NuxtLink>
 </template>
 
@@ -23,10 +23,5 @@
 
 .button:hover {
     background-color: var(--selection);
-}
-
-.icon,
-.icon * {
-    color: var(--foreground);
 }
 </style>

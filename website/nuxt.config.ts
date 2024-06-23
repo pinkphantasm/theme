@@ -39,6 +39,10 @@ export default defineNuxtConfig({
         },
     },
 
+    icon: {
+        class: 'icon',
+    },
+
     modules: [
         '@nuxt/fonts',
         '@nuxt/image',

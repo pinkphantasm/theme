@@ -20,22 +20,20 @@ const switchColorMode = () => {
     <ClientOnly>
         <button class="button" @click="switchColorMode">
             <Icon
-                class="icon"
                 name="carbon:screen"
                 size="28"
                 v-if="$colorMode.preference === 'system'"
             />
             <Icon
-                class="icon"
                 name="carbon:sun"
                 size="28"
                 v-else-if="$colorMode.preference === 'light'"
             />
-            <Icon class="icon" size="28" v-else name="carbon:moon" />
+            <Icon size="28" v-else name="carbon:moon" />
         </button>
         <template #fallback>
             <button class="button">
-                <Icon class="icon" name="carbon:circle-dash" size="28" />
+                <Icon name="carbon:circle-dash" size="28" />
             </button>
         </template>
     </ClientOnly>
@@ -56,10 +54,5 @@ const switchColorMode = () => {
 
 .button:hover {
     background-color: var(--selection);
-}
-
-.icon,
-.icon * {
-    color: var(--foreground);
 }
 </style>

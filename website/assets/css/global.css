@@ -15,3 +15,8 @@ body {
 a {
     color: var(--foreground);
 }
+
+.icon,
+.icon * {
+    color: var(--foreground);
+}
