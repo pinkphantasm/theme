@@ -5,10 +5,16 @@ export default defineI18nConfig(() => ({
             home: {
                 title: 'Consistent color palette — Pink Phantasm Theme',
             },
+            header: {
+                menu: 'Menu',
+            },
         },
         ru: {
             home: {
                 title: 'Последовательная цветовая палитра — Pink Phantasm Theme',
+            },
+            header: {
+                menu: 'Меню',
             },
         },
     },
