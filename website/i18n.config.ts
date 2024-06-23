@@ -37,6 +37,11 @@ export default defineI18nConfig(() => ({
                     button: 'Creativity is just a click away!',
                 },
             },
+            themes: {
+                title: 'Upstream themes — Pink Phantasm Theme',
+                heading: 'Upstream themes',
+                notFound: 'There is nothing here yet...',
+            },
             header: {
                 menu: 'Menu',
             },
@@ -77,6 +82,11 @@ export default defineI18nConfig(() => ({
                         'Настройте наши цветовые палитры так, как вам хочется. Создайте свою уникальную, безупречную тему, которая подойдёт вам лучше всего!',
                     button: 'Творчество — всего в одном клике!',
                 },
+            },
+            themes: {
+                title: 'Основные темы — Pink Phantasm Theme',
+                heading: 'Основные темы',
+                notFound: 'Здесь пока ничего нет...',
             },
             header: {
                 menu: 'Меню',
