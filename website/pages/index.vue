@@ -27,7 +27,7 @@ definePageMeta({
                     $t('home.upstream.button')
                 }}</UiButtonLinkPrimary>
             </div>
-            <NuxtImg src="/img/upstream.svg" />
+            <NuxtImg class="section-img" src="/img/upstream.svg" />
         </section>
         <section class="section customization">
             <div class="section-text">
@@ -41,7 +41,7 @@ definePageMeta({
                     $t('home.customization.button')
                 }}</UiButtonLinkPrimary>
             </div>
-            <NuxtImg src="/img/customization.svg" />
+            <NuxtImg class="section-img" src="/img/customization.svg" />
         </section>
     </main>
 </template>
@@ -78,6 +78,7 @@ definePageMeta({
 .section {
     display: flex;
     align-items: center;
+    width: 100%;
     margin: 48px 0;
     padding: 16px;
     gap: 16px;
@@ -104,9 +105,19 @@ definePageMeta({
     font-size: 1.2rem;
 }
 
+.section-img {
+    width: 100%;
+    max-width: 324px;
+}
+
 @media screen and (max-width: 840px) {
     .hero-title {
         font-size: 3.5rem;
+    }
+
+    .section,
+    .section.customization {
+        flex-direction: column-reverse;
     }
 }
 
