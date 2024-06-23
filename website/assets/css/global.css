@@ -10,6 +10,7 @@ body {
     color: var(--foreground);
     background-color: var(--background);
     transition: var(--transition-color);
+    padding-top: var(--header-height);
 }
 
 a {
