@@ -32,6 +32,7 @@ const title = computed(() => t(route.meta.title ?? 'TBD', t('home.title')))
             </template>
         </Head>
         <Body>
+            <MainHeader />
             <slot />
         </Body>
     </Html>
