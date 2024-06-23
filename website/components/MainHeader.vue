@@ -99,6 +99,7 @@ const menuIsOpen = ref(false)
     min-height: 68px;
     z-index: var(--z5);
     background-color: var(--background);
+    border-bottom: 1px solid var(--selection);
 }
 
 .header-nav {
