@@ -77,6 +77,7 @@ const currentLocale = computed(() => {
 
 .locale-switcher:hover .current {
     background-color: var(--selection);
+    border-radius: 4px 4px 0 0;
 }
 
 .locale-switcher:hover .locales {
@@ -90,6 +91,9 @@ const currentLocale = computed(() => {
     padding: 4px 0;
     width: 100%;
     list-style-type: none;
+    background-color: var(--background);
+    border-radius: 0 0 4px 4px;
+    border: 2px solid var(--selection);
 }
 
 .locale-item {
