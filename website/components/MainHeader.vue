@@ -40,7 +40,7 @@ const menuIsOpen = ref(false)
             </nav>
             <menu class="menu">
                 <LocaleSwitcher class="locale-switcher" />
-                <ChangeColorModeButton />
+                <ColorModeSwitcher />
                 <GitHubButton class="github-button" />
                 <UiButton
                     class="button-toggle-menu"
