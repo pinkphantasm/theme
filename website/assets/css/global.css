@@ -9,4 +9,5 @@
 body {
     color: var(--foreground);
     background-color: var(--background);
+    transition: var(--transition-color);
 }

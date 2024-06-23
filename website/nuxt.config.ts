@@ -1,6 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    css: ['~/assets/css/colors.css', '~/assets/css/global.css'],
+    colorMode: {
+        fallback: 'light',
+    },
+
+    css: [
+        '~/assets/css/colors.css',
+        '~/assets/css/global.css',
+        '~/assets/css/variables.css',
+    ],
 
     devtools: { enabled: true },
 
