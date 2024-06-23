@@ -23,7 +23,6 @@ withDefaults(defineProps<Props>(), {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 48px;
     padding: 12px 16px;
     border-radius: 4px;
     border: 2px solid var(--green);
