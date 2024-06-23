@@ -1,4 +1,11 @@
 :root {
     --transition-color: color 0.1s ease-in-out,
         background-color 0.1s ease-in-out;
+
+    --z1: 2;
+    --z2: 4;
+    --z3: 8;
+    --z4: 16;
+    --z5: 32;
+    --z6: 64;
 }
