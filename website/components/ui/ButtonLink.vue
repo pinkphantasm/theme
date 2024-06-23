@@ -23,9 +23,10 @@ withDefaults(defineProps<Props>(), {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
+    min-width: 36px;
     height: 36px;
     background-color: transparent;
+    text-decoration: none;
     border-radius: 4px;
 }
 

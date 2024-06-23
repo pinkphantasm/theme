@@ -54,6 +54,7 @@ const currentLocale = computed(() => {
 .current {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 8px;
     transition: var(--transition-color);
     width: 100%;
@@ -67,7 +68,7 @@ const currentLocale = computed(() => {
     position: absolute;
     top: 32px;
     left: 0;
-    width: 112px;
+    width: 100%;
 }
 
 .locales:hover {
