@@ -19,7 +19,7 @@ const menuIsOpen = ref(false)
                                 class="logo"
                                 width="32"
                                 height="32"
-                                src="/icons/logo.svg"
+                                src="/logo.svg"
                                 alt="Pink Phantasm"
                             />
                         </NuxtLink>
