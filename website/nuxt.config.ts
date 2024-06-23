@@ -50,6 +50,7 @@ export default defineNuxtConfig({
         '@nuxt/image',
         '@nuxtjs/color-mode',
         '@nuxtjs/i18n',
+        '@vueuse/nuxt',
         'nuxt-icon',
     ],
 })
