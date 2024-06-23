@@ -11,3 +11,7 @@ body {
     background-color: var(--background);
     transition: var(--transition-color);
 }
+
+a {
+    color: var(--foreground);
+}
