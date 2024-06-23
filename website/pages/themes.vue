@@ -42,5 +42,6 @@ definePageMeta({
     justify-content: center;
     gap: 32px;
     padding: 32px 32px calc(32px + var(--header-height)) 32px;
+    text-align: center;
 }
 </style>
