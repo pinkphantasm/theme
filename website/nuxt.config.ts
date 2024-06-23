@@ -39,5 +39,11 @@ export default defineNuxtConfig({
         },
     },
 
-    modules: ['@nuxtjs/color-mode', '@nuxt/fonts', '@nuxtjs/i18n', 'nuxt-icon'],
+    modules: [
+        '@nuxt/fonts',
+        '@nuxt/image',
+        '@nuxtjs/color-mode',
+        '@nuxtjs/i18n',
+        'nuxt-icon',
+    ],
 })
