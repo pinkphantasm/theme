@@ -46,6 +46,7 @@ export default defineNuxtConfig({
     },
 
     modules: [
+        '@nuxt/content',
         '@nuxt/fonts',
         '@nuxt/image',
         '@nuxtjs/color-mode',
