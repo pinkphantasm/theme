@@ -10,8 +10,20 @@ const switchColorMode = useSwitchColorMode()
         </ButtonSecondary>
         <template #fallback>
             <ButtonSecondary>
-                <Icon name="theme-loading" />
+                <Icon class="loading" name="theme-loading" />
             </ButtonSecondary>
         </template>
     </ClientOnly>
 </template>
+
+<style scoped>
+.loading {
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+</style>
