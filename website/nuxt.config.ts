@@ -43,15 +43,22 @@ export default defineNuxtConfig({
 
     icon: {
         class: 'icon',
+        size: '28px',
+        customCollections: [
+            {
+                prefix: 'local',
+                dir: 'assets/icons',
+            },
+        ],
     },
 
     modules: [
         '@nuxt/content',
         '@nuxt/fonts',
+        '@nuxt/icon',
         '@nuxt/image',
         '@nuxtjs/color-mode',
         '@nuxtjs/i18n',
         '@vueuse/nuxt',
-        'nuxt-icon',
     ],
 })
