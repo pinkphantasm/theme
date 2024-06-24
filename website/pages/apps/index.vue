@@ -9,13 +9,13 @@ definePageMeta({
 <template>
     <main>
         <h1>{{ $t('themes.heading') }}</h1>
-        <ContentList path="/themes">
+        <ContentList path="/apps">
             <template #default="{ list }">
                 <AppCard
                     v-for="{ title, _path } in list"
                     :key="_path"
                     :title="title"
-                    :to="_path"
+                    :to="localePath(_path)"
                 />
             </template>
             <template #not-found>

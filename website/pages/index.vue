@@ -23,7 +23,7 @@ definePageMeta({
                 <p class="section-description">
                     {{ $t('home.upstream.description') }}
                 </p>
-                <UiButtonLinkPrimary :to="localePath('themes')">{{
+                <UiButtonLinkPrimary :to="localePath('apps')">{{
                     $t('home.upstream.button')
                 }}</UiButtonLinkPrimary>
             </div>
