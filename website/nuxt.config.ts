@@ -51,6 +51,7 @@ export default defineNuxtConfig({
             divider: 'carbon:chevron-right',
             hex: 'carbon:hashtag',
             home: 'carbon:home',
+            lang: 'carbon:language',
             menu: 'carbon:menu',
             'theme-dark': 'carbon:moon',
             'theme-light': 'carbon:sun',

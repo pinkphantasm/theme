@@ -9,7 +9,7 @@ const currentLocale = computed(() => {
 <template>
     <div class="locale-switcher">
         <p class="current">
-            <Icon name="language" />
+            <Icon name="lang" />
             <span>{{ currentLocale.name }}</span>
         </p>
         <nav class="locales">
