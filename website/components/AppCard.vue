@@ -21,24 +21,23 @@ defineProps<Props>()
 
 <style scoped>
 .wrapper {
+    position: relative;
     width: 100%;
     text-decoration: none;
+    border: 2px solid var(--secondary);
+    border-radius: 12px;
+}
+
+.wrapper:hover {
+    border-color: var(--primary-color);
 }
 
 .card {
-    transition: var(--transition-color);
     display: flex;
     align-items: center;
     gap: 64px;
     width: 100%;
     padding: 24px 48px;
-    background: var(--selection);
-    border: 2px solid var(--secondary);
-    border-radius: 12px;
-}
-
-.card:hover {
-    border-color: var(--green);
 }
 
 .logo {
@@ -46,8 +45,6 @@ defineProps<Props>()
     height: 100px;
     padding: 8px;
     object-fit: contain;
-    border: 2px solid var(--secondary);
-    border-radius: 4px;
 }
 
 .title {

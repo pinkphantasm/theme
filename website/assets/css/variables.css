@@ -1,4 +1,6 @@
 :root {
+    --primary-color: var(--purple);
+
     --transition-color: color 0.1s ease-in-out,
         background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
 
