@@ -1,19 +1,6 @@
 <script setup lang="ts">
 const colorMode = useColorMode()
-
-const switchColorMode = () => {
-    if (colorMode.preference === 'system') {
-        colorMode.preference = 'light'
-        return
-    }
-
-    if (colorMode.preference === 'light') {
-        colorMode.preference = 'dark'
-        return
-    }
-
-    colorMode.preference = 'system'
-}
+const switchColorMode = useSwitchColorMode()
 </script>
 
 <template>
