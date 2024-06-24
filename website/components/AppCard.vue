@@ -1,6 +1,7 @@
 <script setup lang="ts">
 interface Props {
     title: string
+    logo: string
     to: string
 }
 
@@ -10,7 +11,7 @@ defineProps<Props>()
 <template>
     <NuxtLink class="wrapper" :to="to">
         <figure class="card">
-            <NuxtImg class="logo" :src="resolveLogo(title)" :alt="title" />
+            <NuxtImg class="logo" :src="logo" :alt="title" />
             <figcaption>
                 <h2 class="title">{{ title }}</h2>
             </figcaption>

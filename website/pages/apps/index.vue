@@ -16,6 +16,7 @@ definePageMeta({
                     v-for="{ title, _path } in list"
                     :key="_path"
                     :title="title"
+                    :logo="resolveLogo(title)"
                     :to="localePath(_path)"
                 />
             </template>
