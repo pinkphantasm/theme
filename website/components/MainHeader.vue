@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { t } = useI18n()
+const { t } = useI18n({ useScope: 'local' })
 const localePath = useLocalePath()
 const menuIsOpen = ref(false)
 </script>
@@ -56,7 +56,7 @@ const menuIsOpen = ref(false)
             </menu>
         </div>
         <nav class="navigation-menu" :data-open="menuIsOpen">
-            <h2>{{ $t('header.menu') }}</h2>
+            <h2>{{ t('menu') }}</h2>
             <ul class="navigation-menu-list">
                 <li class="navigation-menu-item">
                     <ButtonLinkSecondary
@@ -87,6 +87,13 @@ const menuIsOpen = ref(false)
         </nav>
     </header>
 </template>
+
+<i18n>
+en:
+    menu: Menu
+ru:
+    menu: Меню
+</i18n>
 
 <style scoped>
 .header {

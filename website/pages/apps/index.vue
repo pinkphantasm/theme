@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const { t } = useI18n({ useScope: 'local' })
 const localePath = useLocalePath()
 
 definePageMeta({
@@ -8,7 +9,7 @@ definePageMeta({
 
 <template>
     <main>
-        <h1>{{ $t('themes.heading') }}</h1>
+        <h1>{{ t('heading') }}</h1>
         <ContentList path="/apps">
             <template #default="{ list }">
                 <AppCard
@@ -20,7 +21,7 @@ definePageMeta({
             </template>
             <template #not-found>
                 <section class="not-found">
-                    <h2>{{ $t('themes.notFound') }}</h2>
+                    <h2>{{ t('not_found') }}</h2>
                     <menu>
                         <ButtonLinkSecondary :to="localePath('index')">
                             <Icon name="carbon:home" size="28px" />
@@ -31,6 +32,15 @@ definePageMeta({
         </ContentList>
     </main>
 </template>
+
+<i18n>
+en:
+    heading: Upstream themes
+    not_found: There is nothing here yet...
+ru:
+    heading: Основные темы
+    not_found: Здесь пока ничего нет...
+</i18n>
 
 <style scoped>
 .not-found {
