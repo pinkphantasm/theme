@@ -49,17 +49,26 @@ const menuIsOpen = ref(false)
                 >
                     <Icon name="carbon:logo-github" size="28" />
                 </ButtonLinkSecondary>
-                <ButtonSecondary
-                    class="button-toggle-menu"
-                    @click="menuIsOpen = !menuIsOpen"
-                >
-                    <Icon
-                        :name="
-                            menuIsOpen ? 'carbon:close-large' : 'carbon:menu'
-                        "
-                        size="28px"
-                    />
-                </ButtonSecondary>
+                <ClientOnly>
+                    <ButtonSecondary
+                        class="button-toggle-menu"
+                        @click="menuIsOpen = !menuIsOpen"
+                    >
+                        <Icon
+                            :name="
+                                menuIsOpen
+                                    ? 'carbon:close-large'
+                                    : 'carbon:menu'
+                            "
+                            size="28px"
+                        />
+                    </ButtonSecondary>
+                    <template #fallback>
+                        <ButtonSecondary class="button-toggle-menu-fallback">
+                            <Icon name="carbon:menu" size="28px" />
+                        </ButtonSecondary>
+                    </template>
+                </ClientOnly>
             </menu>
         </div>
         <nav class="navigation-menu" :data-open="menuIsOpen">
@@ -126,6 +135,10 @@ ru:
     display: none;
 }
 
+.button-toggle-menu-fallback {
+    display: none !important;
+}
+
 .logo-navigation {
     height: 100%;
 }
@@ -165,14 +178,6 @@ ru:
     height: calc(100vh - 68px);
 }
 
-.navigation-menu[data-open='true'] {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 32px;
-    gap: 32px;
-}
-
 .navigation-menu-list {
     display: flex;
     flex-direction: column;
@@ -191,8 +196,20 @@ ru:
 }
 
 @media screen and (max-width: 450px) {
+    .navigation-menu[data-open='true'] {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 32px;
+        gap: 32px;
+    }
+
     .button-toggle-menu {
         display: block;
+    }
+
+    .button-toggle-menu-fallback {
+        display: block !important;
     }
 
     .menu .hideable {
