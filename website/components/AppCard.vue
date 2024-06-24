@@ -1,6 +1,4 @@
 <script setup lang="ts">
-const logoPath = useLogoPath()
-
 interface Props {
     title: string
     to: string
@@ -12,7 +10,7 @@ defineProps<Props>()
 <template>
     <NuxtLink class="wrapper" :to="to">
         <figure class="card">
-            <NuxtImg class="logo" :src="logoPath(title)" :alt="title" />
+            <NuxtImg class="logo" :src="resolveLogo(title)" :alt="title" />
             <figcaption>
                 <h2 class="title">{{ title }}</h2>
             </figcaption>
