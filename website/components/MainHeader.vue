@@ -42,7 +42,7 @@ const menuIsOpen = ref(false)
                 <LocaleSwitcher class="locale-switcher" />
                 <ColorModeSwitcher />
                 <GitHubButton class="github-button" />
-                <UiButton
+                <ButtonSecondary
                     class="button-toggle-menu"
                     @click="menuIsOpen = !menuIsOpen"
                 >
@@ -52,14 +52,14 @@ const menuIsOpen = ref(false)
                         "
                         size="28px"
                     />
-                </UiButton>
+                </ButtonSecondary>
             </menu>
         </div>
         <nav class="navigation-menu" :data-open="menuIsOpen">
             <h2>{{ $t('header.menu') }}</h2>
             <ul class="navigation-menu-list">
                 <li class="navigation-menu-item">
-                    <UiButtonLink
+                    <ButtonLinkSecondary
                         class="navigation-menu-link"
                         to="https://pinkphantasm.ru/"
                         target="_blank"
@@ -67,10 +67,10 @@ const menuIsOpen = ref(false)
                     >
                         <Icon name="lucide:ghost" size="28px" />
                         <span>Pink Phantasm</span>
-                    </UiButtonLink>
+                    </ButtonLinkSecondary>
                 </li>
                 <li class="navigation-menu-item">
-                    <UiButtonLink
+                    <ButtonLinkSecondary
                         class="navigation-menu-link"
                         to="https://github.com/pinkphantasm/theme"
                         target="_blank"
@@ -78,7 +78,7 @@ const menuIsOpen = ref(false)
                     >
                         <Icon name="carbon:logo-github" size="28px" />
                         <span>GitHub</span>
-                    </UiButtonLink>
+                    </ButtonLinkSecondary>
                 </li>
                 <li>
                     <LocaleSwitcher class="menu-locale-switcher" />

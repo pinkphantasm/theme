@@ -23,9 +23,9 @@ definePageMeta({
                 <p class="section-description">
                     {{ $t('home.upstream.description') }}
                 </p>
-                <UiButtonLinkPrimary :to="localePath('apps')">{{
+                <ButtonLinkPrimary :to="localePath('apps')">{{
                     $t('home.upstream.button')
-                }}</UiButtonLinkPrimary>
+                }}</ButtonLinkPrimary>
             </div>
             <NuxtImg class="section-img" src="/img/upstream.svg" />
         </section>
@@ -37,9 +37,9 @@ definePageMeta({
                 <p class="section-description">
                     {{ $t('home.customization.description') }}
                 </p>
-                <UiButtonLinkPrimary :to="localePath('editor')">{{
+                <ButtonLinkPrimary :to="localePath('editor')">{{
                     $t('home.customization.button')
-                }}</UiButtonLinkPrimary>
+                }}</ButtonLinkPrimary>
             </div>
             <NuxtImg class="section-img" src="/img/customization.svg" />
         </section>

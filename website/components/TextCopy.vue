@@ -11,16 +11,19 @@ const { copy, copied, isSupported } = useClipboard({ source: props.text })
     <div class="text-copy">
         <span class="text">{{ text }}</span>
         <ClientOnly>
-            <UiButton v-if="isSupported && !copied" @click="copy(props.text)">
+            <ButtonSecondary
+                v-if="isSupported && !copied"
+                @click="copy(props.text)"
+            >
                 <Icon class="icon-copy" name="carbon:copy" size="24px" />
-            </UiButton>
-            <UiButton class="button-sucess" v-else-if="copied">
+            </ButtonSecondary>
+            <ButtonSecondary class="button-sucess" v-else-if="copied">
                 <Icon
                     class="icon-success"
                     name="carbon:checkmark"
                     size="24px"
                 />
-            </UiButton>
+            </ButtonSecondary>
             <template #fallback>
                 <div class="fallback"></div>
             </template>

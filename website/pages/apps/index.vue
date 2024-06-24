@@ -22,9 +22,9 @@ definePageMeta({
                 <section class="not-found">
                     <h2>{{ $t('themes.notFound') }}</h2>
                     <menu>
-                        <UiButtonLink :to="localePath('index')">
+                        <ButtonLinkSecondary :to="localePath('index')">
                             <Icon name="carbon:home" size="28px" />
-                        </UiButtonLink>
+                        </ButtonLinkSecondary>
                     </menu>
                 </section>
             </template>

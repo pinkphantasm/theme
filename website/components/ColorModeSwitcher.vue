@@ -18,7 +18,7 @@ const switchColorMode = () => {
 
 <template>
     <ClientOnly>
-        <UiButton @click="switchColorMode">
+        <ButtonSecondary @click="switchColorMode">
             <Icon
                 name="carbon:screen"
                 size="28"
@@ -30,11 +30,11 @@ const switchColorMode = () => {
                 v-else-if="$colorMode.preference === 'light'"
             />
             <Icon size="28" v-else name="carbon:moon" />
-        </UiButton>
+        </ButtonSecondary>
         <template #fallback>
-            <UiButton>
+            <ButtonSecondary>
                 <Icon name="carbon:circle-dash" size="28" />
-            </UiButton>
+            </ButtonSecondary>
         </template>
     </ClientOnly>
 </template>

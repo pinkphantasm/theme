@@ -58,62 +58,62 @@ const colors = computed(() => {
         <tbody>
             <tr>
                 <td>{{ $t('home.palette.background') }}</td>
-                <td><UiTextCopy :text="colors.background" /></td>
+                <td><TextCopy :text="colors.background" /></td>
                 <td><div class="color background"></div></td>
             </tr>
             <tr>
                 <td>{{ $t('home.palette.currentLine') }}</td>
-                <td><UiTextCopy :text="colors.currentLine" /></td>
+                <td><TextCopy :text="colors.currentLine" /></td>
                 <td><div class="color current-line"></div></td>
             </tr>
             <tr>
                 <td>{{ $t('home.palette.selection') }}</td>
-                <td><UiTextCopy :text="colors.selection" /></td>
+                <td><TextCopy :text="colors.selection" /></td>
                 <td><div class="color selection"></div></td>
             </tr>
             <tr>
                 <td>{{ $t('home.palette.foreground') }}</td>
-                <td><UiTextCopy :text="colors.foreground" /></td>
+                <td><TextCopy :text="colors.foreground" /></td>
                 <td><div class="color foreground"></div></td>
             </tr>
             <tr>
                 <td>{{ $t('home.palette.comment') }}</td>
-                <td><UiTextCopy :text="colors.comment" /></td>
+                <td><TextCopy :text="colors.comment" /></td>
                 <td><div class="color comment"></div></td>
             </tr>
             <tr>
                 <td>{{ $t('home.palette.blue') }}</td>
-                <td><UiTextCopy :text="colors.blue" /></td>
+                <td><TextCopy :text="colors.blue" /></td>
                 <td><div class="color blue"></div></td>
             </tr>
             <tr>
                 <td>{{ $t('home.palette.green') }}</td>
-                <td><UiTextCopy :text="colors.green" /></td>
+                <td><TextCopy :text="colors.green" /></td>
                 <td><div class="color green"></div></td>
             </tr>
             <tr>
                 <td>{{ $t('home.palette.orange') }}</td>
-                <td><UiTextCopy :text="colors.orange" /></td>
+                <td><TextCopy :text="colors.orange" /></td>
                 <td><div class="color orange"></div></td>
             </tr>
             <tr>
                 <td>{{ $t('home.palette.pink') }}</td>
-                <td><UiTextCopy :text="colors.pink" /></td>
+                <td><TextCopy :text="colors.pink" /></td>
                 <td><div class="color pink"></div></td>
             </tr>
             <tr>
                 <td>{{ $t('home.palette.purple') }}</td>
-                <td><UiTextCopy :text="colors.purple" /></td>
+                <td><TextCopy :text="colors.purple" /></td>
                 <td><div class="color purple"></div></td>
             </tr>
             <tr>
                 <td>{{ $t('home.palette.red') }}</td>
-                <td><UiTextCopy :text="colors.red" /></td>
+                <td><TextCopy :text="colors.red" /></td>
                 <td><div class="color red"></div></td>
             </tr>
             <tr>
                 <td>{{ $t('home.palette.yellow') }}</td>
-                <td><UiTextCopy :text="colors.yellow" /></td>
+                <td><TextCopy :text="colors.yellow" /></td>
                 <td><div class="color yellow"></div></td>
             </tr>
         </tbody>
