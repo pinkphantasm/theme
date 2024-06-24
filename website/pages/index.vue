@@ -10,34 +10,20 @@ definePageMeta({
 <template>
     <main>
         <HeroBanner />
-        <section class="section upstream">
-            <div class="section-text">
-                <h2 class="section-heading">
-                    {{ t('upstream.heading') }}
-                </h2>
-                <p class="section-description">
-                    {{ t('upstream.description') }}
-                </p>
-                <ButtonLinkPrimary :to="localePath('apps')">{{
-                    t('upstream.button')
-                }}</ButtonLinkPrimary>
-            </div>
-            <NuxtImg class="section-img" src="/img/upstream.svg" />
-        </section>
-        <section class="section customization">
-            <div class="section-text">
-                <h2 class="section-heading">
-                    {{ t('customization.heading') }}
-                </h2>
-                <p class="section-description">
-                    {{ t('customization.description') }}
-                </p>
-                <ButtonLinkPrimary :to="localePath('editor')">{{
-                    t('customization.button')
-                }}</ButtonLinkPrimary>
-            </div>
-            <NuxtImg class="section-img" src="/img/customization.svg" />
-        </section>
+        <HomeSection picture="/img/upstream.svg">
+            <h2>{{ t('upstream.heading') }}</h2>
+            <p>{{ t('upstream.description') }}</p>
+            <ButtonLinkPrimary :to="localePath('apps')">
+                {{ t('upstream.button') }}
+            </ButtonLinkPrimary>
+        </HomeSection>
+        <HomeSection picture="/img/customization.svg">
+            <h2>{{ t('customization.heading') }}</h2>
+            <p>{{ t('customization.description') }}</p>
+            <ButtonLinkPrimary :to="localePath('editor')">
+                {{ t('customization.button') }}
+            </ButtonLinkPrimary>
+        </HomeSection>
     </main>
 </template>
 
@@ -61,47 +47,3 @@ ru:
         description: 'Настройте наши цветовые палитры так, как вам хочется. Создайте свою уникальную, безупречную тему, которая подойдёт вам лучше всего!'
         button: 'Творчество — всего в одном клике!'
 </i18n>
-
-<style scoped>
-.section {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin: 48px 0;
-    padding: 16px;
-    gap: 16px;
-}
-
-.section.customization {
-    flex-direction: row-reverse;
-}
-
-.section-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 48px;
-    padding: 32px;
-}
-
-.section-heading {
-    font-size: 2rem;
-}
-
-.section-description {
-    font-size: 1.2rem;
-}
-
-.section-img {
-    width: 100%;
-    max-width: 324px;
-}
-
-@media screen and (max-width: 840px) {
-    .section,
-    .section.customization {
-        flex-direction: column-reverse;
-    }
-}
-</style>
