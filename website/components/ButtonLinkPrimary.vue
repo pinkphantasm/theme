@@ -25,16 +25,16 @@ withDefaults(defineProps<Props>(), {
     justify-content: center;
     padding: 12px 16px;
     border-radius: 4px;
-    border: 2px solid var(--green);
+    border: 2px solid var(--primary-color);
     background: transparent;
-    color: var(--green);
+    color: var(--primary-color);
     font-size: large;
     font-weight: bold;
     text-decoration: none;
 }
 
 .button:hover {
-    background: var(--green);
+    background: var(--primary-color);
     color: var(--background);
 }
 </style>
