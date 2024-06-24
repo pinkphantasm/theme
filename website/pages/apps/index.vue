@@ -25,7 +25,7 @@ definePageMeta({
                     <h2>{{ t('not_found') }}</h2>
                     <menu>
                         <ButtonLinkSecondary :to="localePath('index')">
-                            <Icon name="carbon:home" />
+                            <Icon name="home" />
                         </ButtonLinkSecondary>
                     </menu>
                 </section>

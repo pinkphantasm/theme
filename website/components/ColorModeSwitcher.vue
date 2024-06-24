@@ -6,19 +6,11 @@ const switchColorMode = useSwitchColorMode()
 <template>
     <ClientOnly>
         <ButtonSecondary @click="switchColorMode">
-            <Icon
-                name="carbon:screen"
-                v-if="$colorMode.preference === 'system'"
-            />
-            <Icon
-                name="carbon:sun"
-                v-else-if="$colorMode.preference === 'light'"
-            />
-            <Icon v-else name="carbon:moon" />
+            <Icon :name="'theme-' + $colorMode.preference" />
         </ButtonSecondary>
         <template #fallback>
             <ButtonSecondary>
-                <Icon name="carbon:circle-dash" />
+                <Icon name="theme-loading" />
             </ButtonSecondary>
         </template>
     </ClientOnly>

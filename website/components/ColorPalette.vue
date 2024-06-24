@@ -42,17 +42,13 @@ const colors = computed(() => {
         <thead>
             <tr>
                 <td :aria-label="t('name')">
-                    <Icon
-                        class="head-icon"
-                        name="carbon:string-text"
-                        size="24px"
-                    />
+                    <Icon class="head-icon" name="abc" size="24px" />
                 </td>
                 <td :aria-label="t('hex')">
-                    <Icon class="head-icon" name="carbon:hashtag" size="24px" />
+                    <Icon class="head-icon" name="hex" size="24px" />
                 </td>
                 <td :aria-label="t('preview')">
-                    <Icon class="head-icon" name="carbon:view" size="24px" />
+                    <Icon class="head-icon" name="view" size="24px" />
                 </td>
             </tr>
         </thead>

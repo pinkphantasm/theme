@@ -9,7 +9,7 @@ const currentLocale = computed(() => {
 <template>
     <div class="locale-switcher">
         <p class="current">
-            <Icon name="carbon:language" />
+            <Icon name="language" />
             <span>{{ currentLocale.name }}</span>
         </p>
         <nav class="locales">
@@ -27,7 +27,7 @@ const currentLocale = computed(() => {
                     >
                         <Icon
                             class="icon-current"
-                            name="carbon:checkmark"
+                            name="tick"
                             size="16px"
                             v-if="availableLocale.code === locale"
                         />

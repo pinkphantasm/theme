@@ -15,17 +15,15 @@ const { copy, copied, isSupported } = useClipboard({ source: props.text })
                 v-if="isSupported && !copied"
                 @click="copy(props.text)"
             >
-                <Icon class="icon-copy" name="carbon:copy" size="24px" />
+                <Icon class="icon-copy" name="copy" size="24px" />
             </ButtonSecondary>
             <ButtonSecondary class="button-sucess" v-else-if="copied">
-                <Icon
-                    class="icon-success"
-                    name="carbon:checkmark"
-                    size="24px"
-                />
+                <Icon class="icon-success" name="tick" size="24px" />
             </ButtonSecondary>
             <template #fallback>
-                <div class="fallback"></div>
+                <div class="fallback">
+                    <Icon class="icon-copy-fallback" name="copy" size="24px" />
+                </div>
             </template>
         </ClientOnly>
     </div>
@@ -47,8 +45,15 @@ const { copy, copied, isSupported } = useClipboard({ source: props.text })
 }
 
 .icon-copy,
-.icon-copy * {
+.icon-copy *,
+.icon-copy-fallback,
+.icon-copy-fallback * {
     color: var(--comment);
+}
+
+.icon-copy:hover,
+.icon-copy:hover * {
+    color: var(--foreground);
 }
 
 .icon-success,
@@ -57,6 +62,9 @@ const { copy, copied, isSupported } = useClipboard({ source: props.text })
 }
 
 .fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 36px;
     height: 36px;
 }

@@ -15,21 +15,11 @@ const menuIsOpen = ref(false)
                             external
                             target="_blank"
                         >
-                            <NuxtImg
-                                class="logo"
-                                width="32"
-                                height="32"
-                                src="/logo.svg"
-                                alt="Pink Phantasm"
-                            />
+                            <Icon name="pinkphantasm" size="32px" />
                         </NuxtLink>
                     </li>
                     <li class="navigation-item" role="presentation">
-                        <Icon
-                            class="divider"
-                            name="carbon:chevron-right"
-                            size="24"
-                        />
+                        <Icon class="divider" name="divider" size="24px" />
                     </li>
                     <li class="navigation-item">
                         <NuxtLink class="link" :to="localePath('index')">
@@ -47,24 +37,18 @@ const menuIsOpen = ref(false)
                     external
                     target="_blank"
                 >
-                    <Icon name="carbon:logo-github" />
+                    <Icon name="github" />
                 </ButtonLinkSecondary>
                 <ClientOnly>
                     <ButtonSecondary
                         class="button-toggle-menu"
                         @click="menuIsOpen = !menuIsOpen"
                     >
-                        <Icon
-                            :name="
-                                menuIsOpen
-                                    ? 'carbon:close-large'
-                                    : 'carbon:menu'
-                            "
-                        />
+                        <Icon :name="menuIsOpen ? 'close' : 'menu'" />
                     </ButtonSecondary>
                     <template #fallback>
                         <ButtonSecondary class="button-toggle-menu-fallback">
-                            <Icon name="carbon:menu" />
+                            <Icon name="menu" />
                         </ButtonSecondary>
                     </template>
                 </ClientOnly>
@@ -80,7 +64,7 @@ const menuIsOpen = ref(false)
                         target="_blank"
                         external
                     >
-                        <Icon name="lucide:ghost" size="28px" />
+                        <Icon name="pinkphantasm" />
                         <span>Pink Phantasm</span>
                     </ButtonLinkSecondary>
                 </li>
@@ -91,7 +75,7 @@ const menuIsOpen = ref(false)
                         target="_blank"
                         external
                     >
-                        <Icon name="carbon:logo-github" />
+                        <Icon name="github" />
                         <span>GitHub</span>
                     </ButtonLinkSecondary>
                 </li>
@@ -204,7 +188,7 @@ ru:
     }
 
     .button-toggle-menu {
-        display: block;
+        display: flex;
     }
 
     .button-toggle-menu-fallback {

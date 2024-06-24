@@ -44,6 +44,24 @@ export default defineNuxtConfig({
     icon: {
         class: 'icon',
         size: '28px',
+        aliases: {
+            abc: 'carbon:string-text',
+            close: 'carbon:close-large',
+            copy: 'carbon:copy',
+            divider: 'carbon:chevron-right',
+            hex: 'carbon:hashtag',
+            home: 'carbon:home',
+            menu: 'carbon:menu',
+            'theme-dark': 'carbon:moon',
+            'theme-light': 'carbon:sun',
+            'theme-loading': 'carbon:circle-dash',
+            'theme-system': 'carbon:screen',
+            tick: 'carbon:checkmark',
+            view: 'carbon:view',
+
+            github: 'carbon:logo-github',
+            pinkphantasm: 'local:pinkphantasm',
+        },
         customCollections: [
             {
                 prefix: 'local',
