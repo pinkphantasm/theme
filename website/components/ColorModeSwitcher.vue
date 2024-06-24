@@ -9,15 +9,17 @@ const switchColorMode = useSwitchColorMode()
             <Icon :name="'theme-' + $colorMode.preference" />
         </ButtonSecondary>
         <template #fallback>
-            <ButtonSecondary>
-                <Icon class="loading" name="theme-loading" />
-            </ButtonSecondary>
+            <div class="fallback">
+                <ButtonSecondary>
+                    <Icon name="theme-loading" />
+                </ButtonSecondary>
+            </div>
         </template>
     </ClientOnly>
 </template>
 
 <style scoped>
-.loading {
+.fallback .icon {
     animation: spin 2s linear infinite;
 }
 
