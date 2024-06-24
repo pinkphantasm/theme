@@ -39,9 +39,16 @@ const menuIsOpen = ref(false)
                 </ul>
             </nav>
             <menu class="menu">
-                <LocaleSwitcher class="locale-switcher" />
+                <LocaleSwitcher class="hideable" />
                 <ColorModeSwitcher />
-                <GitHubButton class="github-button" />
+                <ButtonLinkSecondary
+                    class="hideable"
+                    to="https://github.com/pinkphantasm/theme"
+                    external
+                    target="_blank"
+                >
+                    <Icon name="carbon:logo-github" size="28" />
+                </ButtonLinkSecondary>
                 <ButtonSecondary
                     class="button-toggle-menu"
                     @click="menuIsOpen = !menuIsOpen"
@@ -188,8 +195,7 @@ ru:
         display: block;
     }
 
-    .menu .locale-switcher,
-    .menu .github-button {
+    .menu .hideable {
         display: none;
     }
 }
