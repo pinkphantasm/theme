@@ -1,12 +1,10 @@
 export default defineI18nConfig(() => ({
     legacy: false,
+    defaultSFCLang: 'yaml',
     messages: {
         en: {
             home: {
                 title: 'Consistent color palette — Pink Phantasm Theme',
-                heading: 'Pink Phantasm Theme',
-                tagline:
-                    'A simple and consistent color scheme by Pink Phantasm',
                 palette: {
                     name: 'Color Name',
                     hex: 'HEX',
@@ -49,9 +47,6 @@ export default defineI18nConfig(() => ({
         ru: {
             home: {
                 title: 'Последовательная цветовая палитра — Pink Phantasm Theme',
-                heading: 'Тема Pink Phantasm',
-                tagline:
-                    'Простая и последовательная цветовая палитра от Pink Phantasm',
                 palette: {
                     name: 'Название цвета',
                     hex: 'HEX',
