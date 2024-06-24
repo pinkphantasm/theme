@@ -13,10 +13,10 @@ definePageMeta({
         <ContentList path="/apps">
             <template #default="{ list }">
                 <AppCard
-                    v-for="{ title, _path } in list"
+                    v-for="{ app, _path } in list"
                     :key="_path"
-                    :title="title"
-                    :logo="resolveLogo(title)"
+                    :title="app"
+                    :logo="resolveLogo(app)"
                     :to="localePath(_path)"
                 />
             </template>
