@@ -47,7 +47,7 @@ const menuIsOpen = ref(false)
                     external
                     target="_blank"
                 >
-                    <Icon name="carbon:logo-github" size="28" />
+                    <Icon name="carbon:logo-github" />
                 </ButtonLinkSecondary>
                 <ClientOnly>
                     <ButtonSecondary
@@ -60,12 +60,11 @@ const menuIsOpen = ref(false)
                                     ? 'carbon:close-large'
                                     : 'carbon:menu'
                             "
-                            size="28px"
                         />
                     </ButtonSecondary>
                     <template #fallback>
                         <ButtonSecondary class="button-toggle-menu-fallback">
-                            <Icon name="carbon:menu" size="28px" />
+                            <Icon name="carbon:menu" />
                         </ButtonSecondary>
                     </template>
                 </ClientOnly>
@@ -92,7 +91,7 @@ const menuIsOpen = ref(false)
                         target="_blank"
                         external
                     >
-                        <Icon name="carbon:logo-github" size="28px" />
+                        <Icon name="carbon:logo-github" />
                         <span>GitHub</span>
                     </ButtonLinkSecondary>
                 </li>
