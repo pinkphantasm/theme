@@ -59,62 +59,62 @@ const colors = computed(() => {
             <tr>
                 <td>{{ $t('home.palette.background') }}</td>
                 <td><TextCopy :text="colors.background" /></td>
-                <td><div class="color background"></div></td>
+                <td><div class="color bg-background"></div></td>
             </tr>
             <tr>
                 <td>{{ $t('home.palette.currentLine') }}</td>
                 <td><TextCopy :text="colors.currentLine" /></td>
-                <td><div class="color current-line"></div></td>
+                <td><div class="color bg-current-line"></div></td>
             </tr>
             <tr>
                 <td>{{ $t('home.palette.selection') }}</td>
                 <td><TextCopy :text="colors.selection" /></td>
-                <td><div class="color selection"></div></td>
+                <td><div class="color bg-selection"></div></td>
             </tr>
             <tr>
                 <td>{{ $t('home.palette.foreground') }}</td>
                 <td><TextCopy :text="colors.foreground" /></td>
-                <td><div class="color foreground"></div></td>
+                <td><div class="color bg-foreground"></div></td>
             </tr>
             <tr>
                 <td>{{ $t('home.palette.comment') }}</td>
                 <td><TextCopy :text="colors.comment" /></td>
-                <td><div class="color comment"></div></td>
+                <td><div class="color bg-comment"></div></td>
             </tr>
             <tr>
                 <td>{{ $t('home.palette.blue') }}</td>
                 <td><TextCopy :text="colors.blue" /></td>
-                <td><div class="color blue"></div></td>
+                <td><div class="color bg-blue"></div></td>
             </tr>
             <tr>
                 <td>{{ $t('home.palette.green') }}</td>
                 <td><TextCopy :text="colors.green" /></td>
-                <td><div class="color green"></div></td>
+                <td><div class="color bg-green"></div></td>
             </tr>
             <tr>
                 <td>{{ $t('home.palette.orange') }}</td>
                 <td><TextCopy :text="colors.orange" /></td>
-                <td><div class="color orange"></div></td>
+                <td><div class="color bg-orange"></div></td>
             </tr>
             <tr>
                 <td>{{ $t('home.palette.pink') }}</td>
                 <td><TextCopy :text="colors.pink" /></td>
-                <td><div class="color pink"></div></td>
+                <td><div class="color bg-pink"></div></td>
             </tr>
             <tr>
                 <td>{{ $t('home.palette.purple') }}</td>
                 <td><TextCopy :text="colors.purple" /></td>
-                <td><div class="color purple"></div></td>
+                <td><div class="color bg-purple"></div></td>
             </tr>
             <tr>
                 <td>{{ $t('home.palette.red') }}</td>
                 <td><TextCopy :text="colors.red" /></td>
-                <td><div class="color red"></div></td>
+                <td><div class="color bg-red"></div></td>
             </tr>
             <tr>
                 <td>{{ $t('home.palette.yellow') }}</td>
                 <td><TextCopy :text="colors.yellow" /></td>
-                <td><div class="color yellow"></div></td>
+                <td><div class="color bg-yellow"></div></td>
             </tr>
         </tbody>
     </table>
@@ -147,54 +147,6 @@ const colors = computed(() => {
     height: 32px;
     border: 1px solid var(--foreground);
     margin: 0 auto;
-}
-
-.background {
-    background-color: var(--background);
-}
-
-.current-line {
-    background-color: var(--current-line);
-}
-
-.comment {
-    background-color: var(--comment);
-}
-
-.selection {
-    background-color: var(--selection);
-}
-
-.foreground {
-    background-color: var(--foreground);
-}
-
-.blue {
-    background-color: var(--blue);
-}
-
-.green {
-    background-color: var(--green);
-}
-
-.orange {
-    background-color: var(--orange);
-}
-
-.pink {
-    background-color: var(--pink);
-}
-
-.purple {
-    background-color: var(--purple);
-}
-
-.red {
-    background-color: var(--red);
-}
-
-.yellow {
-    background-color: var(--yellow);
 }
 
 @media screen and (max-width: 516px) {

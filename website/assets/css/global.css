@@ -30,3 +30,51 @@ main {
 .icon * {
     color: var(--foreground);
 }
+
+.bg-background {
+    background-color: var(--background);
+}
+
+.bg-current-line {
+    background-color: var(--current-line);
+}
+
+.bg-comment {
+    background-color: var(--comment);
+}
+
+.bg-selection {
+    background-color: var(--selection);
+}
+
+.bg-foreground {
+    background-color: var(--foreground);
+}
+
+.bg-blue {
+    background-color: var(--blue);
+}
+
+.bg-green {
+    background-color: var(--green);
+}
+
+.bg-orange {
+    background-color: var(--orange);
+}
+
+.bg-pink {
+    background-color: var(--pink);
+}
+
+.bg-purple {
+    background-color: var(--purple);
+}
+
+.bg-red {
+    background-color: var(--red);
+}
+
+.bg-yellow {
+    background-color: var(--yellow);
+}
