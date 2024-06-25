@@ -137,7 +137,7 @@ ru:
 
 .palette td {
     padding: 8px;
-    border: 1px solid var(--comment);
+    border: 1px solid var(--selection);
 }
 
 .color {
