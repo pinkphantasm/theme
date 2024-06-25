@@ -14,6 +14,10 @@ const luminance = (r: number, g: number, b: number): number => {
     return (299 * r + 587 * g + 114 * b) / 1000
 }
 
+export const randomColor = (): string => {
+    return '#' + (Math.random().toString(16) + '000000').substring(2, 8)
+}
+
 export const textColor = (bg: string): string => {
     return luminance(...hexToRgb(bg)) > 125 ? BLACK : WHITE
 }
