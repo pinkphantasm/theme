@@ -2,7 +2,7 @@ export const useColors = () => {
     const colorMode = useColorMode()
 
     return computed(() => {
-        if (colorMode.preference === 'dark') {
+        if (colorMode.value === 'dark') {
             return {
                 background: '#232323',
                 currentLine: '#404240',
