@@ -46,6 +46,7 @@ export default defineNuxtConfig({
         size: '28px',
         aliases: {
             abc: 'carbon:string-text',
+            add: 'carbon:add-large',
             close: 'carbon:close-large',
             copy: 'carbon:copy',
             divider: 'carbon:chevron-right',
@@ -55,6 +56,7 @@ export default defineNuxtConfig({
             loading: 'carbon:circle-dash',
             menu: 'carbon:menu',
             random: 'carbon:shuffle',
+            share: 'carbon:share',
             'theme-dark': 'carbon:moon',
             'theme-light': 'carbon:sun',
             'theme-system': 'carbon:screen',
