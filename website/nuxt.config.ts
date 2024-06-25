@@ -54,6 +54,7 @@ export default defineNuxtConfig({
             lang: 'carbon:language',
             loading: 'carbon:circle-dash',
             menu: 'carbon:menu',
+            random: 'carbon:shuffle',
             'theme-dark': 'carbon:moon',
             'theme-light': 'carbon:sun',
             'theme-system': 'carbon:screen',
