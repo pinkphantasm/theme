@@ -31,7 +31,10 @@ const head = useLocaleHead({
                 <Meta :name="name" :content="t(content)" />
             </template>
             <Meta name="og:url" content="https://theme.pinkphantasm.ru/" />
-            <Meta name="publisher" content="Ivan Shelepugin" />
+            <Meta name="og:image" content="https://theme.pinkphantasm.ru/social.png"/>
+            <Meta name="twitter:card" content="summary_large_image" />
+            <Meta name="twitter:image" content="https://theme.pinkphantasm.ru/social.png" />
+            <Meta name="color-scheme" content="dark light" />
             <Meta name="generator" content="Cloudflare" />
             <Title>{{ t('index.title') }}</Title>
         </Head>

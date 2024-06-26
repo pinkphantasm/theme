@@ -9,6 +9,10 @@ definePageMeta({
     'og:title': 'apps.title',
     'og:description': 'apps.description',
     'og:keywords': 'apps.keywords',
+
+    // Twitter.
+    'twitter:title': 'apps.title',
+    'twitter:description': 'apps.description',
 })
 
 const { t } = useI18n({ useScope: 'local' })

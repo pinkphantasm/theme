@@ -9,6 +9,10 @@ definePageMeta({
     'og:title': 'editor.title',
     'og:description': 'editor.description',
     'og:keywords': 'editor.keywords',
+
+    // Twitter.
+    'twitter:title': 'editor.title',
+    'twitter:description': 'editor.description',
 })
 
 const { baseUrl } = useAppConfig()
