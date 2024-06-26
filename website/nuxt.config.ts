@@ -45,30 +45,6 @@ export default defineNuxtConfig({
     icon: {
         class: 'icon',
         size: '28px',
-        aliases: {
-            // Carbon.
-            abc: 'carbon:string-text',
-            add: 'carbon:add-large',
-            close: 'carbon:close-large',
-            copy: 'carbon:copy',
-            divider: 'carbon:chevron-right',
-            github: 'carbon:logo-github',
-            hex: 'carbon:hashtag',
-            home: 'carbon:home',
-            lang: 'carbon:language',
-            loading: 'carbon:circle-dash',
-            menu: 'carbon:menu',
-            random: 'carbon:shuffle',
-            share: 'carbon:share',
-            'theme-dark': 'carbon:moon',
-            'theme-light': 'carbon:sun',
-            'theme-system': 'carbon:screen',
-            tick: 'carbon:checkmark',
-            view: 'carbon:view',
-
-            // Local icons.
-            pinkphantasm: 'local:pinkphantasm',
-        },
         customCollections: [
             {
                 prefix: 'local',
@@ -80,11 +56,11 @@ export default defineNuxtConfig({
     modules: [
         '@nuxt/content',
         '@nuxt/fonts',
-        '@nuxt/icon',
         '@nuxt/image',
         '@nuxtjs/color-mode',
         '@nuxtjs/i18n',
         '@vueuse/nuxt',
+        'nuxt-icon',
     ],
 
     vite: {

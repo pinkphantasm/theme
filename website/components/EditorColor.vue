@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { copy, copied, isSupported } = useClipboard()
+const { i, s } = useIcon()
 const id = useId()
 
 interface Emits {
@@ -45,15 +46,15 @@ const randomize = () => {
             >
                 <Icon
                     class="menu-icon"
-                    :name="copied ? 'tick' : 'copy'"
-                    size="24px"
+                    :name="copied ? i.tick : i.copy"
+                    :size="s.sm"
                 />
             </button>
             <button class="menu-button" @click="$emit('remove')">
-                <Icon class="menu-icon" name="close" size="24px" />
+                <Icon class="menu-icon" :name="i.close" :size="s.sm" />
             </button>
             <button class="menu-button" @click="randomize">
-                <BaseIcon name="shuffle" size="24px" :color="foreground" />
+                <Icon class="menu-icon" :name="i.shuffle" :size="s.sm" />
             </button>
         </menu>
     </div>

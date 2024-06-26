@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { locale, locales, setLocale } = useI18n()
+const { i, s } = useIcon()
 
 const currentLocale = computed(() => {
     return locales.value.find((i) => i.code === locale.value)
@@ -9,7 +10,7 @@ const currentLocale = computed(() => {
 <template>
     <div class="locale-switcher">
         <p class="current">
-            <Icon name="lang" />
+            <Icon :name="i.lang" :size="s.df" />
             <span>{{ currentLocale.name }}</span>
         </p>
         <nav class="locales">
@@ -27,8 +28,8 @@ const currentLocale = computed(() => {
                     >
                         <Icon
                             class="icon-current"
-                            name="tick"
-                            size="16px"
+                            :name="i.tick"
+                            :size="s.xs"
                             v-if="availableLocale.code === locale"
                         />
                         <span>{{ availableLocale.name }}</span>

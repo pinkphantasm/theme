@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { t } = useI18n({ useScope: 'local' })
+const { i, s } = useIcon()
 const localePath = useLocalePath()
 
 definePageMeta({
@@ -25,7 +26,7 @@ definePageMeta({
                     <h2>{{ t('not_found') }}</h2>
                     <menu>
                         <ButtonLinkSecondary :to="localePath('index')">
-                            <Icon name="home" />
+                            <Icon :name="i.home" :size="s.df" />
                         </ButtonLinkSecondary>
                     </menu>
                 </section>

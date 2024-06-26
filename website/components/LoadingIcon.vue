@@ -1,6 +1,10 @@
+<script setup>
+const { i, s } = useIcon()
+</script>
+
 <template>
     <div class="loading">
-        <Icon name="loading" />
+        <Icon :name="i.loading" :size="s.df" />
     </div>
 </template>
 

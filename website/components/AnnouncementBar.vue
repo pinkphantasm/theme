@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const { i, s } = useIcon()
+
 interface Props {
     text: string
 }
@@ -12,7 +14,7 @@ const hidden = ref(false)
     <div class="bar" :data-hidden="hidden">
         <p>{{ text }}</p>
         <button class="button-close" @click="hidden = true">
-            <Icon name="close" size="12px" />
+            <Icon :name="i.close" :size="s.xxs" />
         </button>
     </div>
 </template>

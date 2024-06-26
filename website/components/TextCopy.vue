@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const { i, s } = useIcon()
+
 interface Props {
     text: string
 }
@@ -15,14 +17,19 @@ const { copy, copied, isSupported } = useClipboard({ source: props.text })
                 v-if="isSupported && !copied"
                 @click="copy(props.text)"
             >
-                <Icon class="icon-copy" name="copy" size="24px" />
+                <Icon class="icon-copy" :name="i.copy" :size="s.sm" />
             </ButtonSecondary>
             <ButtonSecondary class="button-sucess" v-else-if="copied">
-                <Icon class="icon-success" name="tick" size="24px" />
+                <Icon class="icon-success" :name="i.tick" :size="s.sm" />
             </ButtonSecondary>
+            <div class="fallback" v-else></div>
             <template #fallback>
                 <div class="fallback">
-                    <Icon class="icon-copy-fallback" name="copy" size="24px" />
+                    <Icon
+                        class="icon-copy-fallback"
+                        :name="i.copy"
+                        :size="s.sm"
+                    />
                 </div>
             </template>
         </ClientOnly>

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { t } = useI18n({ useScope: 'local' })
+const { i, s } = useIcon()
 </script>
 
 <template>
@@ -10,7 +11,7 @@ const { t } = useI18n({ useScope: 'local' })
         </p>
         <menu>
             <ButtonLinkSecondary :to="localePath('index')">
-                <Icon name="home" />
+                <Icon :name="i.home" />
             </ButtonLinkSecondary>
         </menu>
     </section>

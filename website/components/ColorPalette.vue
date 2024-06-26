@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { t } = useI18n({ useScope: 'local' })
+const { i, s } = useIcon()
 const colors = useColors()
 </script>
 
@@ -8,13 +9,13 @@ const colors = useColors()
         <thead>
             <tr>
                 <td :aria-label="t('name')">
-                    <Icon class="head-icon" name="abc" size="24px" />
+                    <Icon class="head-icon" :name="i.abc" :size="s.sm" />
                 </td>
                 <td :aria-label="t('hex')">
-                    <Icon class="head-icon" name="hex" size="24px" />
+                    <Icon class="head-icon" :name="i.hex" :size="s.sm" />
                 </td>
                 <td :aria-label="t('preview')">
-                    <Icon class="head-icon" name="view" size="24px" />
+                    <Icon class="head-icon" :name="i.view" :size="s.sm" />
                 </td>
             </tr>
         </thead>

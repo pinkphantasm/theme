@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const { baseUrl } = useAppConfig()
 const { t } = useI18n({ useScope: 'local' })
+const { i, s } = useIcon()
 const colors = useQueryColors()
 
 const persistentLink = computed(() => {
@@ -15,7 +16,7 @@ const {
 } = useClipboard({ source: persistentLink })
 
 const { share, isSupported: shareIsSupported } = useShare({
-    url: persistentLink,
+    url: persistentLink.value,
 })
 
 const changeColor = (index: number, value: string) => {
@@ -44,7 +45,7 @@ const removeColor = (index: number) => {
                     class="menu-button"
                     @click="colors.push(randomColor())"
                 >
-                    <BaseIcon name="add" />
+                    <Icon :name="i.add" :size="s.sm" />
                     {{ t('add') }}
                 </ButtonSecondary>
                 <ButtonSecondary
@@ -52,7 +53,7 @@ const removeColor = (index: number) => {
                     v-if="shareIsSupported"
                     @click="share"
                 >
-                    <BaseIcon name="share" size="24px" />
+                    <Icon :name="i.share" :size="s.sm" />
                     {{ t('share') }}
                 </ButtonSecondary>
                 <ButtonSecondary
@@ -60,7 +61,7 @@ const removeColor = (index: number) => {
                     v-else-if="clipboardIsSupported"
                     @click="copy"
                 >
-                    <Icon :name="copied ? 'tick' : 'copy'" size="24px" />
+                    <Icon :name="copied ? i.tick : i.copy" :size="s.sm" />
                     {{ t('copy') }}
                 </ButtonSecondary>
             </menu>

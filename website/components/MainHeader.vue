@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { t } = useI18n({ useScope: 'local' })
+const { i, s } = useIcon()
 const localePath = useLocalePath()
 const menuIsOpen = ref(false)
 </script>
@@ -15,11 +16,15 @@ const menuIsOpen = ref(false)
                             external
                             target="_blank"
                         >
-                            <Icon name="pinkphantasm" size="32px" />
+                            <NuxtImg
+                                src="/logo.svg"
+                                width="32px"
+                                height="32px"
+                            />
                         </NuxtLink>
                     </li>
                     <li class="navigation-item" role="presentation">
-                        <Icon class="divider" name="divider" size="24px" />
+                        <Icon class="divider" :name="i.divider" :size="s.sm" />
                     </li>
                     <li class="navigation-item">
                         <NuxtLink class="link" :to="localePath('index')">
@@ -37,18 +42,21 @@ const menuIsOpen = ref(false)
                     external
                     target="_blank"
                 >
-                    <Icon name="github" />
+                    <Icon :name="i.github" :size="s.df" />
                 </ButtonLinkSecondary>
                 <ClientOnly>
                     <ButtonSecondary
                         class="button-toggle-menu"
                         @click="menuIsOpen = !menuIsOpen"
                     >
-                        <Icon :name="menuIsOpen ? 'close' : 'menu'" />
+                        <Icon
+                            :name="menuIsOpen ? i.close : i.menu"
+                            :size="s.df"
+                        />
                     </ButtonSecondary>
                     <template #fallback>
                         <ButtonSecondary class="button-toggle-menu-fallback">
-                            <Icon name="menu" />
+                            <Icon :name="i.menu" :size="s.df" />
                         </ButtonSecondary>
                     </template>
                 </ClientOnly>
@@ -64,7 +72,7 @@ const menuIsOpen = ref(false)
                         target="_blank"
                         external
                     >
-                        <Icon name="pinkphantasm" />
+                        <NuxtImg src="/logo.svg" width="32px" height="32px" />
                         <span>Pink Phantasm</span>
                     </ButtonLinkSecondary>
                 </li>
@@ -75,7 +83,7 @@ const menuIsOpen = ref(false)
                         target="_blank"
                         external
                     >
-                        <Icon name="github" />
+                        <Icon :name="i.github" :size="s.df" />
                         <span>GitHub</span>
                     </ButtonLinkSecondary>
                 </li>
