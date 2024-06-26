@@ -2,11 +2,12 @@
 const { baseUrl } = useAppConfig()
 const { t } = useI18n({ useScope: 'local' })
 const { i, s } = useIcon()
+const localePath = useLocalePath()
 const colors = useQueryColors()
 
 const persistentLink = computed(() => {
     const colorSearchParam = colors.value.map((c) => c.slice(1)).join('-')
-    return `${baseUrl}/editor?c=${colorSearchParam}`
+    return `${baseUrl}${localePath('editor')}?c=${colorSearchParam}`
 })
 
 const {
