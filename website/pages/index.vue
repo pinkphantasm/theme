@@ -10,14 +10,17 @@ definePageMeta({
 <template>
     <main>
         <HeroBanner />
-        <HomeSection picture="/img/upstream.svg">
+        <HomeSection picture="/img/upstream.svg" :alt="t('upstream.heading')">
             <h2>{{ t('upstream.heading') }}</h2>
             <p>{{ t('upstream.description') }}</p>
             <ButtonLinkPrimary :to="localePath('apps')">
                 {{ t('upstream.button') }}
             </ButtonLinkPrimary>
         </HomeSection>
-        <HomeSection picture="/img/customization.svg">
+        <HomeSection
+            picture="/img/customization.svg"
+            :alt="t('customization.heading')"
+        >
             <h2>{{ t('customization.heading') }}</h2>
             <p>{{ t('customization.description') }}</p>
             <ButtonLinkPrimary :to="localePath('editor')">

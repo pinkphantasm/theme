@@ -25,7 +25,10 @@ definePageMeta({
                 <section class="not-found">
                     <h2>{{ t('not_found') }}</h2>
                     <menu>
-                        <ButtonLinkSecondary :to="localePath('index')">
+                        <ButtonLinkSecondary
+                            :to="localePath('index')"
+                            :aria-label="t('home')"
+                        >
                             <Icon :name="i.home" :size="s.df" />
                         </ButtonLinkSecondary>
                     </menu>
@@ -39,9 +42,11 @@ definePageMeta({
 en:
     heading: Upstream themes
     not_found: There is nothing here yet...
+    home: Return to the home page
 ru:
     heading: Основные темы
     not_found: Здесь пока ничего нет...
+    home: Вернуться на главную страницу
 </i18n>
 
 <style scoped>

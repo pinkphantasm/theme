@@ -10,8 +10,11 @@ const { i, s } = useIcon()
             {{ t('not_found') }}: <b>{{ $route.params.app }}</b>
         </p>
         <menu>
-            <ButtonLinkSecondary :to="localePath('index')">
-                <Icon :name="i.home" />
+            <ButtonLinkSecondary
+                :to="localePath('index')"
+                :aria-label="t('home')"
+            >
+                <Icon :name="i.home" :size="s.df" />
             </ButtonLinkSecondary>
         </menu>
     </section>
@@ -19,9 +22,11 @@ const { i, s } = useIcon()
 
 <i18n>
 en:
-    not_found: 'Theme not found'
+    not_found: Theme not found
+    home: Return to the home page
 ru:
-    not_found: 'Тема не найдена'
+    not_found: Тема не найдена
+    home: Вернуться на главную страницу
 </i18n>
 
 <style scoped>

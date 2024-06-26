@@ -1,6 +1,6 @@
 <script setup lang="ts">
 interface Emits {
-    (e: 'change', value: string): void
+    (e: 'click', value: string): void
 }
 
 defineEmits<Emits>()

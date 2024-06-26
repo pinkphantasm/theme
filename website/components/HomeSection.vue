@@ -1,6 +1,7 @@
 <script setup lang="ts">
 interface Props {
     picture: string
+    alt: string
 }
 
 defineProps<Props>()
@@ -8,7 +9,7 @@ defineProps<Props>()
 
 <template>
     <section class="section">
-        <NuxtImg class="picture" :src="picture" :alt="text" />
+        <NuxtImg class="picture" :src="picture" :alt="alt" />
         <div class="content">
             <slot />
         </div>

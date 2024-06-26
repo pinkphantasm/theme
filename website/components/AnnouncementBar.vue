@@ -5,18 +5,29 @@ interface Props {
 
 defineProps<Props>()
 
-const { i, s } = useIcon()
+const { i, s } = useIcon({ useScope: 'local' })
 const hidden = ref(false)
 </script>
 
 <template>
     <div class="bar" :data-hidden="hidden">
         <p>{{ text }}</p>
-        <button class="button-close" @click="hidden = true">
+        <button
+            class="button-close"
+            @click="hidden = true"
+            :aria-label="t('close')"
+        >
             <Icon :name="i.close" :size="s.xxs" />
         </button>
     </div>
 </template>
+
+<i18n>
+en:
+    close: Close
+ru:
+    close: Закрыть
+</i18n>
 
 <style scoped>
 .bar {

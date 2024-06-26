@@ -18,6 +18,7 @@ const menuIsOpen = ref(false)
                         >
                             <NuxtImg
                                 src="/logo.svg"
+                                alt="Pink Phantasm"
                                 width="32px"
                                 height="32px"
                             />
@@ -41,12 +42,14 @@ const menuIsOpen = ref(false)
                     to="https://github.com/pinkphantasm/theme"
                     external
                     target="_blank"
+                    aria-label="GitHub"
                 >
                     <Icon :name="i.github" :size="s.df" />
                 </ButtonLinkSecondary>
                 <ClientOnly>
                     <ButtonSecondary
                         class="button-toggle-menu"
+                        aria-label="menuIsOpen ? t('menu_open') : t('menu_close')"
                         @click="menuIsOpen = !menuIsOpen"
                     >
                         <Icon
@@ -72,7 +75,12 @@ const menuIsOpen = ref(false)
                         target="_blank"
                         external
                     >
-                        <NuxtImg src="/logo.svg" width="32px" height="32px" />
+                        <NuxtImg
+                            src="/logo.svg"
+                            alt="Pink Phantasm"
+                            width="32px"
+                            height="32px"
+                        />
                         <span>Pink Phantasm</span>
                     </ButtonLinkSecondary>
                 </li>
@@ -98,8 +106,12 @@ const menuIsOpen = ref(false)
 <i18n>
 en:
     menu: Menu
+    menu_open: Open navigation menu
+    menu_close: Close navigation menu
 ru:
     menu: Меню
+    menu_open: Открыть меню навигации
+    menu_close: Закрыть меню навигации
 </i18n>
 
 <style scoped>

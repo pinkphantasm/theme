@@ -6,6 +6,7 @@ interface Props {
 const props = defineProps<Props>()
 
 const { copy, copied, isSupported } = useClipboard({ source: props.text })
+const { t } = useI18n({ useScope: 'local' })
 const { i, s } = useIcon()
 </script>
 
@@ -13,13 +14,21 @@ const { i, s } = useIcon()
     <div class="text-copy">
         <span class="text">{{ text }}</span>
         <ClientOnly>
-            <ButtonSecondary v-if="isSupported && !copied" @click="copy()">
+            <ButtonSecondary
+                :aria-label="t('copy')"
+                v-if="isSupported && !copied"
+                @click="copy()"
+            >
                 <Icon class="icon-copy" :name="i.copy" :size="s.sm" />
             </ButtonSecondary>
-            <ButtonSecondary class="button-sucess" v-else-if="copied">
+            <ButtonSecondary
+                class="button-sucess"
+                :aria-label="t('copied')"
+                v-else-if="copied"
+            >
                 <Icon class="icon-success" :name="i.tick" :size="s.sm" />
             </ButtonSecondary>
-            <div class="fallback" v-else></div>
+            <div class="fallback" :aria-label="t('fallback')" v-else></div>
             <template #fallback>
                 <div class="fallback">
                     <Icon
@@ -32,6 +41,17 @@ const { i, s } = useIcon()
         </ClientOnly>
     </div>
 </template>
+
+<i18n>
+en:
+    copy: Copy hex code to clipboard
+    copied: Copied successfully
+    fallback: Your browser does not support clipboard
+ru:
+    copy: Скопировать hex-код в буфер обмена
+    copied: Скопировано
+    fallback: Ваш браузер не поддерживает буфер обмена
+</i18n>
 
 <style scoped>
 .text-copy {

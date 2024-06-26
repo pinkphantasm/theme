@@ -15,6 +15,7 @@ const value = ref(props.color)
 const foreground = computed(() => textColor(value.value))
 
 const { copy, copied, isSupported } = useClipboard({ source: value })
+const { t } = useI18n({ useScope: 'local' })
 const { i, s } = useIcon()
 const id = useId()
 
@@ -41,6 +42,7 @@ const randomize = () => {
                 class="menu-button"
                 :disabled="copied"
                 :data-copied="copied"
+                :aria-label="copied ? t('copied') : t('copy')"
                 v-if="isSupported"
                 @click="copy()"
             >
@@ -50,15 +52,36 @@ const randomize = () => {
                     :size="s.sm"
                 />
             </button>
-            <button class="menu-button" @click="$emit('remove')">
+            <button
+                class="menu-button"
+                :aria-label="t('remove')"
+                @click="$emit('remove')"
+            >
                 <Icon class="menu-icon" :name="i.close" :size="s.sm" />
             </button>
-            <button class="menu-button" @click="randomize">
+            <button
+                class="menu-button"
+                :aria-label="t('shuffle')"
+                @click="randomize"
+            >
                 <Icon class="menu-icon" :name="i.shuffle" :size="s.sm" />
             </button>
         </menu>
     </div>
 </template>
+
+<i18n>
+en:
+    copy: Copy hex code to clipboard
+    copied: Copied successfully
+    remove: Remove color from palette
+    shuffle: Replace with a random color
+ru:
+    copy: Скопировать hex-код в буфер обмена
+    copied: Скопировано
+    remove: Убрать цвет из палитры
+    shuffle: Заменить на случайный цвет
+</i18n>
 
 <style scoped>
 .color {
