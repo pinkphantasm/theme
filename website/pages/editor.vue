@@ -32,9 +32,7 @@ const {
     isSupported: clipboardIsSupported,
 } = useClipboard({ source: persistentLink })
 
-const { share, isSupported: shareIsSupported } = useShare({
-    url: persistentLink.value,
-})
+const { share, isSupported: shareIsSupported } = useShare()
 
 const changeColor = (index: number, value: string) => {
     colors.value[index].color = value
@@ -42,6 +40,12 @@ const changeColor = (index: number, value: string) => {
 
 const removeColor = (index: number) => {
     colors.value.splice(index, 1)
+}
+
+const startShare = () => {
+    share({
+        url: persistentLink.value,
+    })
 }
 </script>
 
@@ -68,7 +72,7 @@ const removeColor = (index: number) => {
                 <ButtonSecondary
                     class="menu-button"
                     v-if="shareIsSupported"
-                    @click="share"
+                    @click="startShare()"
                 >
                     <Icon :name="i.share" :size="s.sm" />
                     {{ t('share') }}
