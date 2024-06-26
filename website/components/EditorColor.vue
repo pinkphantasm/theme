@@ -53,7 +53,7 @@ const randomize = () => {
                 <Icon class="menu-icon" name="close" size="24px" />
             </button>
             <button class="menu-button" @click="randomize">
-                <Icon class="menu-icon" name="random" size="24px" />
+                <BaseIcon name="shuffle" size="24px" :color="foreground" />
             </button>
         </menu>
     </div>

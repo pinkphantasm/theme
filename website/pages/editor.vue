@@ -44,7 +44,7 @@ const removeColor = (index: number) => {
                     class="menu-button"
                     @click="colors.push(randomColor())"
                 >
-                    <Icon name="add" size="24px" />
+                    <BaseIcon name="add" />
                     {{ t('add') }}
                 </ButtonSecondary>
                 <ButtonSecondary
@@ -52,7 +52,7 @@ const removeColor = (index: number) => {
                     v-if="shareIsSupported"
                     @click="share"
                 >
-                    <Icon name="share" size="24px" />
+                    <BaseIcon name="share" size="24px" />
                     {{ t('share') }}
                 </ButtonSecondary>
                 <ButtonSecondary
