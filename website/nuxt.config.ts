@@ -1,5 +1,3 @@
-import svgLoader from 'vite-svg-loader'
-
 export default defineNuxtConfig({
     colorMode: {
         fallback: 'light',
@@ -62,8 +60,4 @@ export default defineNuxtConfig({
         '@vueuse/nuxt',
         'nuxt-icon',
     ],
-
-    vite: {
-        plugins: [svgLoader()],
-    },
 })
