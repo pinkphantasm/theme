@@ -1,4 +1,5 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import svgLoader from 'vite-svg-loader'
+
 export default defineNuxtConfig({
     colorMode: {
         fallback: 'light',
@@ -45,11 +46,13 @@ export default defineNuxtConfig({
         class: 'icon',
         size: '28px',
         aliases: {
+            // Carbon.
             abc: 'carbon:string-text',
             add: 'carbon:add-large',
             close: 'carbon:close-large',
             copy: 'carbon:copy',
             divider: 'carbon:chevron-right',
+            github: 'carbon:logo-github',
             hex: 'carbon:hashtag',
             home: 'carbon:home',
             lang: 'carbon:language',
@@ -63,7 +66,7 @@ export default defineNuxtConfig({
             tick: 'carbon:checkmark',
             view: 'carbon:view',
 
-            github: 'carbon:logo-github',
+            // Local icons.
             pinkphantasm: 'local:pinkphantasm',
         },
         customCollections: [
@@ -83,4 +86,8 @@ export default defineNuxtConfig({
         '@nuxtjs/i18n',
         '@vueuse/nuxt',
     ],
+
+    vite: {
+        plugins: [svgLoader()],
+    },
 })

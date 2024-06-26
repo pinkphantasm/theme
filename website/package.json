@@ -27,7 +27,8 @@
     "devDependencies": {
         "prettier": "3.3.2",
         "serve": "^14.2.3",
-        "typescript": "^5.5.2"
+        "typescript": "^5.5.2",
+        "vite-svg-loader": "^5.1.0"
     },
     "prettier": {
         "singleQuote": true,
