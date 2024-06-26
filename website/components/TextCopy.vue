@@ -5,7 +5,7 @@ interface Props {
 
 const props = defineProps<Props>()
 
-const { copy, copied, isSupported } = useClipboard({ source: props.text })
+const { copy, copied, isSupported } = useClipboard()
 const { t } = useI18n({ useScope: 'local' })
 const { i, s } = useIcon()
 </script>
@@ -17,7 +17,7 @@ const { i, s } = useIcon()
             <ButtonSecondary
                 :aria-label="t('copy')"
                 v-if="isSupported && !copied"
-                @click="copy()"
+                @click="copy(props.text)"
             >
                 <Icon class="icon-copy" :name="i.copy" :size="s.sm" />
             </ButtonSecondary>
