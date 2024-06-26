@@ -1,4 +1,16 @@
 <script setup lang="ts">
+definePageMeta({
+    // Base.
+    title: 'editor.title',
+    description: 'editor.description',
+    keywords: 'editor.keywords',
+
+    // Open Graph.
+    'og:title': 'editor.title',
+    'og:description': 'editor.description',
+    'og:keywords': 'editor.keywords',
+})
+
 const { baseUrl } = useAppConfig()
 const { t } = useI18n({ useScope: 'local' })
 const { i, s } = useIcon()

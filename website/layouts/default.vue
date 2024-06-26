@@ -1,20 +1,17 @@
 <script setup lang="ts">
-const route = useRoute()
 const { t } = useI18n()
+const route = useRoute()
 
 const head = useLocaleHead({
     addDirAttribute: true,
     identifierAttribute: 'id',
     addSeoAttributes: true,
 })
-
-const title = computed(() => t(route.meta.title ?? 'TBD', t('home.title')))
 </script>
 
 <template>
     <Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir">
         <Head>
-            <Title>{{ title }}</Title>
             <template v-for="link in head.link" :key="link.id">
                 <Link
                     :id="link.id"
@@ -30,6 +27,13 @@ const title = computed(() => t(route.meta.title ?? 'TBD', t('home.title')))
                     :content="meta.content"
                 />
             </template>
+            <template v-for="(content, name) in route.meta" :key="name">
+                <Meta :name="name" :content="t(content)" />
+            </template>
+            <Meta name="og:url" content="https://theme.pinkphantasm.ru/" />
+            <Meta name="publisher" content="Ivan Shelepugin" />
+            <Meta name="generator" content="Cloudflare" />
+            <Title>{{ t('index.title') }}</Title>
         </Head>
         <Body>
             <MainHeader />

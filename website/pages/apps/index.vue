@@ -1,11 +1,19 @@
 <script setup lang="ts">
+definePageMeta({
+    // Base.
+    title: 'apps.title',
+    description: 'apps.description',
+    keywords: 'apps.keywords',
+
+    // Open Graph.
+    'og:title': 'apps.title',
+    'og:description': 'apps.description',
+    'og:keywords': 'apps.keywords',
+})
+
 const { t } = useI18n({ useScope: 'local' })
 const { i, s } = useIcon()
 const localePath = useLocalePath()
-
-definePageMeta({
-    title: 'themes.title',
-})
 </script>
 
 <template>
