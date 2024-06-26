@@ -51,7 +51,6 @@ const removeColor = (index: number) => {
             <div class="colors">
                 <EditorColor
                     v-for="(color, index) in colors"
-                    :key="color"
                     :color="color"
                     @change="(v) => changeColor(index, v)"
                     @remove="removeColor(index)"

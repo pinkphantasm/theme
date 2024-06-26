@@ -17,26 +17,30 @@ const foreground = computed(() => textColor(value.value))
 const { copy, copied, isSupported } = useClipboard({ source: value })
 const { t } = useI18n({ useScope: 'local' })
 const { i, s } = useIcon()
-const id = useId()
 
 const randomize = () => {
     value.value = randomColor()
+    emit('change', value.value.toUpperCase())
+}
+
+const onChange = (hex: string) => {
+    value.value = hex
     emit('change', value.value.toUpperCase())
 }
 </script>
 
 <template>
     <div class="color">
-        <label class="label" :for="id">
-            {{ value.toUpperCase() }}
-        </label>
-        <input
-            :id="id"
-            hidden
-            type="color"
-            v-model="value"
-            @change="$emit('change', value.toUpperCase())"
+        <ColorPicker
+            :disableAlpha="true"
+            format="hex"
+            :pureColor="props.color"
+            shape="circle"
+            @update:pureColor="onChange"
         />
+        <span class="label">
+            {{ value.toUpperCase() }}
+        </span>
         <menu class="menu">
             <button
                 class="menu-button"
@@ -95,8 +99,13 @@ ru:
     background-color: v-bind(value);
 }
 
+/* vue3-colorpicker  */
+:deep(.vc-color-wrap.round) {
+    margin-right: 0;
+    border-color: v-bind(foreground);
+}
+
 .label {
-    cursor: pointer;
     font-family: 'JetBrains Mono', monospace;
     color: v-bind(foreground);
 }
