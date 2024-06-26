@@ -22,7 +22,7 @@ const localePath = useLocalePath()
 const colors = useQueryColors()
 
 const persistentLink = computed(() => {
-    const colorSearchParam = colors.value.map((c) => c.slice(1)).join('-')
+    const colorSearchParam = colors.value.map((c) => c.color.slice(1)).join('-')
     return `${baseUrl}${localePath('editor')}?c=${colorSearchParam}`
 })
 
@@ -37,7 +37,7 @@ const { share, isSupported: shareIsSupported } = useShare({
 })
 
 const changeColor = (index: number, value: string) => {
-    colors.value[index] = value
+    colors.value[index].color = value
 }
 
 const removeColor = (index: number) => {
@@ -50,7 +50,8 @@ const removeColor = (index: number) => {
         <ClientOnly>
             <div class="colors">
                 <EditorColor
-                    v-for="(color, index) in colors"
+                    v-for="({ id, color }, index) in colors"
+                    :key="id"
                     :color="color"
                     @change="(v) => changeColor(index, v)"
                     @remove="removeColor(index)"

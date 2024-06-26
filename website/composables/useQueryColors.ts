@@ -1,4 +1,16 @@
-export const useQueryColors = (): Ref<string[]> => {
+interface ColorWithId {
+    id: string
+    color: string
+}
+
+const addIds = (colors: string[]): ColorWithId[] => {
+    return colors.map((color) => ({
+        id: `${Date.now()}:${color}`,
+        color,
+    }))
+}
+
+export const useQueryColors = (): Ref<ColorWithId[]> => {
     const colors = useColors()
     const { query } = useRoute()
     const { replace } = useRouter()
@@ -7,12 +19,14 @@ export const useQueryColors = (): Ref<string[]> => {
         replace({ query: undefined })
 
         return ref(
-            query.c
-                .toString()
-                .split('-')
-                .map((c) => `#${c}`),
+            addIds(
+                query.c
+                    .toString()
+                    .split('-')
+                    .map((c) => `#${c}`),
+            ),
         )
     }
 
-    return ref(Object.values(colors.value))
+    return ref(addIds(Object.values(colors.value)))
 }
