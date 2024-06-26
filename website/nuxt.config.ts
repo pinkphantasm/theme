@@ -7,6 +7,7 @@ export default defineNuxtConfig({
         '~/assets/css/colors.css',
         '~/assets/css/global.css',
         '~/assets/css/variables.css',
+        '~/assets/css/vue3-colorpicker.css',
     ],
 
     devtools: { enabled: true },

@@ -15,8 +15,15 @@ const value = ref(props.color)
 const foreground = computed(() => textColor(value.value))
 
 const { copy, copied, isSupported } = useClipboard({ source: value })
+const colorMode = useColorMode()
 const { t } = useI18n({ useScope: 'local' })
 const { i, s } = useIcon()
+
+const colorPickerTheme = computed(() =>
+    colorMode.value === 'light' ? 'white' : 'black',
+)
+
+console.log(colorPickerTheme.value)
 
 const randomize = () => {
     value.value = randomColor()
@@ -36,6 +43,7 @@ const onChange = (hex: string) => {
             format="hex"
             :pureColor="props.color"
             shape="circle"
+            :theme="colorPickerTheme"
             @update:pureColor="onChange"
         />
         <span class="label">

@@ -1,0 +1,12 @@
+/* 
+ * Overrides for vue3-colorpicker component to match the website theme.
+ * */
+.vc-colorpicker.white {
+    background-color: var(--white) !important;
+    color: var(--black) !important;
+}
+
+.vc-colorpicker.black {
+    background-color: var(--black) !important;
+    color: var(--white) !important;
+}
