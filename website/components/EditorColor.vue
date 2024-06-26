@@ -1,8 +1,4 @@
 <script setup lang="ts">
-const { copy, copied, isSupported } = useClipboard()
-const { i, s } = useIcon()
-const id = useId()
-
 interface Emits {
     (e: 'change', value: string): void
     (e: 'remove'): void
@@ -17,6 +13,10 @@ const props = defineProps<Props>()
 
 const value = ref(props.color)
 const foreground = computed(() => textColor(value.value))
+
+const { copy, copied, isSupported } = useClipboard({ source: value })
+const { i, s } = useIcon()
+const id = useId()
 
 const randomize = () => {
     value.value = randomColor()
@@ -42,7 +42,7 @@ const randomize = () => {
                 :disabled="copied"
                 :data-copied="copied"
                 v-if="isSupported"
-                @click="copy(value)"
+                @click="copy()"
             >
                 <Icon
                     class="menu-icon"

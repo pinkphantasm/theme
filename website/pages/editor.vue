@@ -59,7 +59,7 @@ const removeColor = (index: number) => {
                 <ButtonSecondary
                     class="menu-button"
                     v-else-if="clipboardIsSupported"
-                    @click="copy"
+                    @click="copy()"
                 >
                     <Icon :name="copied ? i.tick : i.copy" :size="s.sm" />
                     {{ t('copy') }}

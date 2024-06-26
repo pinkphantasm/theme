@@ -1,5 +1,9 @@
 <script setup lang="ts">
-const emit = defineEmits(['click'])
+interface Emits {
+    (e: 'change', value: string): void
+}
+
+defineEmits<Emits>()
 </script>
 
 <template>

@@ -1,14 +1,11 @@
 <script setup lang="ts">
 interface Props {
     to: string
-    target: '_blank' | '_self' | '_top' | '_parent'
-    external: boolean
+    target?: '_blank' | '_self' | '_top' | '_parent'
+    external?: boolean
 }
 
-withDefaults(defineProps<Props>(), {
-    target: '_self',
-    external: false,
-})
+defineProps<Props>()
 </script>
 
 <template>

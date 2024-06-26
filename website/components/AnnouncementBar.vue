@@ -1,12 +1,11 @@
 <script setup lang="ts">
-const { i, s } = useIcon()
-
 interface Props {
     text: string
 }
 
 defineProps<Props>()
 
+const { i, s } = useIcon()
 const hidden = ref(false)
 </script>
 

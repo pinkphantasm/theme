@@ -1,22 +1,19 @@
 <script setup lang="ts">
-const { i, s } = useIcon()
-
 interface Props {
     text: string
 }
 
 const props = defineProps<Props>()
+
 const { copy, copied, isSupported } = useClipboard({ source: props.text })
+const { i, s } = useIcon()
 </script>
 
 <template>
     <div class="text-copy">
         <span class="text">{{ text }}</span>
         <ClientOnly>
-            <ButtonSecondary
-                v-if="isSupported && !copied"
-                @click="copy(props.text)"
-            >
+            <ButtonSecondary v-if="isSupported && !copied" @click="copy()">
                 <Icon class="icon-copy" :name="i.copy" :size="s.sm" />
             </ButtonSecondary>
             <ButtonSecondary class="button-sucess" v-else-if="copied">
