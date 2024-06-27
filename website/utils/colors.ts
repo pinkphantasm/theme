@@ -1,6 +1,27 @@
 const WHITE = '#F5FFFA'
 const BLACK = '#232323'
 
+export type AccentColor =
+    | 'blue'
+    | 'green'
+    | 'orange'
+    | 'pink'
+    | 'purple'
+    | 'red'
+    | 'yellow'
+
+export const isAccentColor = (color: string): boolean => {
+    return [
+        'blue',
+        'green',
+        'orange',
+        'pink',
+        'purple',
+        'red',
+        'yellow',
+    ].includes(color)
+}
+
 const hexToRgb = (hex: string): [number, number, number] => {
     return [
         parseInt(`${hex[1]}${hex[2]}`, 16),
