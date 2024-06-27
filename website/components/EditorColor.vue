@@ -23,8 +23,6 @@ const colorPickerTheme = computed(() =>
     colorMode.value === 'light' ? 'white' : 'black',
 )
 
-console.log(colorPickerTheme.value)
-
 const randomize = () => {
     value.value = randomColor()
     emit('change', value.value.toUpperCase())
