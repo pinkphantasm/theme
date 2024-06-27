@@ -17,12 +17,16 @@ definePageMeta({
 
 const { t } = useI18n({ useScope: 'local' })
 const localePath = useLocalePath()
+const svgAsset = useSvgAsset()
 </script>
 
 <template>
     <main>
         <HeroBanner />
-        <HomeSection picture="/img/upstream.svg" :alt="t('upstream.heading')">
+        <HomeSection
+            :picture="svgAsset('upstream')"
+            :alt="t('upstream.heading')"
+        >
             <h2>{{ t('upstream.heading') }}</h2>
             <p>{{ t('upstream.description') }}</p>
             <ButtonLinkPrimary :to="localePath('apps')">
@@ -30,7 +34,7 @@ const localePath = useLocalePath()
             </ButtonLinkPrimary>
         </HomeSection>
         <HomeSection
-            picture="/img/customization.svg"
+            :picture="svgAsset('customization')"
             :alt="t('customization.heading')"
         >
             <h2>{{ t('customization.heading') }}</h2>
