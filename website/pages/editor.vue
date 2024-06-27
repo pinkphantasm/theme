@@ -42,6 +42,10 @@ const removeColor = (index: number) => {
     colors.value.splice(index, 1)
 }
 
+const addColor = () => {
+    colors.value.push(new ColorWithId(randomColor()))
+}
+
 const startShare = () => {
     share({
         url: persistentLink.value,
@@ -64,7 +68,7 @@ const startShare = () => {
             <menu class="menu">
                 <ButtonSecondary
                     class="menu-button"
-                    @click="colors.push(randomColor())"
+                    @click="addColor()"
                 >
                     <Icon :name="i.add" :size="s.sm" />
                     {{ t('add') }}

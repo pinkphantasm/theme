@@ -1,13 +1,11 @@
-interface ColorWithId {
+export class ColorWithId {
     id: string
     color: string
-}
 
-const addIds = (colors: string[]): ColorWithId[] => {
-    return colors.map((color) => ({
-        id: `${Date.now()}:${color}`,
-        color,
-    }))
+    constructor(color: string) {
+        this.id = `${Date.now()}:${color}`
+        this.color = color
+    }
 }
 
 export const useQueryColors = (): Ref<ColorWithId[]> => {
@@ -19,14 +17,12 @@ export const useQueryColors = (): Ref<ColorWithId[]> => {
         replace({ query: undefined })
 
         return ref(
-            addIds(
-                query.c
-                    .toString()
-                    .split('-')
-                    .map((c) => `#${c}`),
-            ),
+            query.c
+                .toString()
+                .split('-')
+                .map((c) => new ColorWithId(`#${c}`)),
         )
     }
 
-    return ref(addIds(Object.values(colors.value)))
+    return ref(Object.values(colors.value).map((c) => new ColorWithId(c)))
 }
