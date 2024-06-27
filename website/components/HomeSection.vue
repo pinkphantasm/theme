@@ -9,7 +9,7 @@ defineProps<Props>()
 
 <template>
     <section class="section">
-        <NuxtImg class="picture" :src="picture" :alt="alt" />
+        <img class="picture" :src="picture" :alt="alt" />
         <div class="content">
             <slot />
         </div>
