@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const accent = useAccentStore()
 const { t } = useI18n({ useScope: 'local' })
 const { i, s } = useIcon()
 const colors = useColors()
@@ -20,66 +21,21 @@ const colors = useColors()
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>{{ t('background') }}</td>
-                <td><TextCopy :text="colors.background" /></td>
-                <td><div class="color bg-background"></div></td>
-            </tr>
-            <tr>
-                <td>{{ t('currentLine') }}</td>
-                <td><TextCopy :text="colors.currentLine" /></td>
-                <td><div class="color bg-current-line"></div></td>
-            </tr>
-            <tr>
-                <td>{{ t('selection') }}</td>
-                <td><TextCopy :text="colors.selection" /></td>
-                <td><div class="color bg-selection"></div></td>
-            </tr>
-            <tr>
-                <td>{{ t('foreground') }}</td>
-                <td><TextCopy :text="colors.foreground" /></td>
-                <td><div class="color bg-foreground"></div></td>
-            </tr>
-            <tr>
-                <td>{{ t('comment') }}</td>
-                <td><TextCopy :text="colors.comment" /></td>
-                <td><div class="color bg-comment"></div></td>
-            </tr>
-            <tr>
-                <td>{{ t('blue') }}</td>
-                <td><TextCopy :text="colors.blue" /></td>
-                <td><div class="color bg-blue"></div></td>
-            </tr>
-            <tr>
-                <td>{{ t('green') }}</td>
-                <td><TextCopy :text="colors.green" /></td>
-                <td><div class="color bg-green"></div></td>
-            </tr>
-            <tr>
-                <td>{{ t('orange') }}</td>
-                <td><TextCopy :text="colors.orange" /></td>
-                <td><div class="color bg-orange"></div></td>
-            </tr>
-            <tr>
-                <td>{{ t('pink') }}</td>
-                <td><TextCopy :text="colors.pink" /></td>
-                <td><div class="color bg-pink"></div></td>
-            </tr>
-            <tr>
-                <td>{{ t('purple') }}</td>
-                <td><TextCopy :text="colors.purple" /></td>
-                <td><div class="color bg-purple"></div></td>
-            </tr>
-            <tr>
-                <td>{{ t('red') }}</td>
-                <td><TextCopy :text="colors.red" /></td>
-                <td><div class="color bg-red"></div></td>
-            </tr>
-            <tr>
-                <td>{{ t('yellow') }}</td>
-                <td><TextCopy :text="colors.yellow" /></td>
-                <td><div class="color bg-yellow"></div></td>
-            </tr>
+            <template v-for="(color, name) in colors" :key="color">
+                <tr>
+                    <td>{{ t(name) }}</td>
+                    <td><TextCopy :text="colors[name]" /></td>
+                    <td v-if="isAccentColor(name)">
+                        <div
+                            :class="`color color-accent bg-${name}`"
+                            @click="accent.setColor(name)"
+                        ></div>
+                    </td>
+                    <td v-else>
+                        <div :class="`color bg-${name}`"></div>
+                    </td>
+                </tr>
+            </template>
         </tbody>
     </table>
 </template>
@@ -146,6 +102,11 @@ ru:
     height: 32px;
     border: 1px solid var(--foreground);
     margin: 0 auto;
+    cursor: not-allowed;
+}
+
+.color-accent {
+    cursor: pointer;
 }
 
 @media screen and (max-width: 516px) {
