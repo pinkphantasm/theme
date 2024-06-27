@@ -66,10 +66,7 @@ const startShare = () => {
                 />
             </div>
             <menu class="menu">
-                <ButtonSecondary
-                    class="menu-button"
-                    @click="addColor()"
-                >
+                <ButtonSecondary class="menu-button" @click="addColor()">
                     <Icon :name="i.add" :size="s.sm" />
                     {{ t('add') }}
                 </ButtonSecondary>
