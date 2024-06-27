@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const accentColor = useAccentColor()
 const { t } = useI18n({ useScope: 'local' })
 </script>
 
@@ -44,6 +45,7 @@ ru:
 
 .hero-title {
     font-size: 4.5rem;
+    border-bottom: 4px solid v-bind(accentColor);
 }
 
 .hero-tagline {

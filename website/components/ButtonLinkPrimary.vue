@@ -6,6 +6,8 @@ interface Props {
 }
 
 defineProps<Props>()
+
+const accentColor = useAccentColor()
 </script>
 
 <template>
@@ -22,16 +24,16 @@ defineProps<Props>()
     justify-content: center;
     padding: 12px 16px;
     border-radius: 4px;
-    border: 2px solid var(--primary-color);
+    border: 2px solid v-bind(accentColor);
     background: transparent;
-    color: var(--primary-color);
+    color: v-bind(accentColor);
     font-size: large;
     font-weight: bold;
     text-decoration: none;
 }
 
 .button:hover {
-    background: var(--primary-color);
+    background: v-bind(accentColor);
     color: var(--background);
 }
 </style>

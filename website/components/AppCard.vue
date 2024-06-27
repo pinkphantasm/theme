@@ -6,6 +6,8 @@ interface Props {
 }
 
 defineProps<Props>()
+
+const accentColor = useAccentColor()
 </script>
 
 <template>
@@ -29,7 +31,7 @@ defineProps<Props>()
 }
 
 .wrapper:hover {
-    border-color: var(--primary-color);
+    border-color: v-bind(accentColor);
 }
 
 .card {
