@@ -58,6 +58,7 @@ export default defineNuxtConfig({
         '@nuxt/image',
         '@nuxtjs/color-mode',
         '@nuxtjs/i18n',
+        '@pinia/nuxt',
         '@vueuse/nuxt',
         'nuxt-icon',
     ],
